@@ -1,0 +1,68 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  swiper?: boolean;
+  page?: string;
+  pagetype?: string;
+}
+
+const {
+  title = "Midnight Digital Pvt Ltd",
+  description = "",
+  keywords = "",
+  swiper = false,
+  page = "home",
+  pagetype = "onepage",
+} = Astro.props;
+
+const version = "1.0.0";
+const mediaurl = "/media/";
+const imagesurl = "/media/images/";
+const cssurl = "/media/css/";
+const fontsurl = "/media/fonts/";
+---
+
+<!DOCTYPE html>
+<html id={page} dir="ltr" lang="en-US">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO -->
+  <title>{title}</title>
+
+  {description && <meta name="description" content={description} />}
+  {keywords && <meta name="keywords" content={keywords} />}
+
+  <meta name="robots" content="index,follow" />
+  <link rel="icon" href={`${mediaurl}favicon/favicon.ico`} type="image/x-icon" />
+  <link rel="shortcut icon" href={`${mediaurl}favicon/favicon.ico`} type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href={`${mediaurl}favicon/apple-icon-180x180.png`} />
+  <meta name="theme-color" content="#ffffff" />
+
+  <!-- Fonts -->
+  <link
+    rel="preload"
+    href={`${fontsurl}yMJRMIlzdpvBhQQL_Qq7dy0.woff2`}
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href={`${cssurl}hoot-framework.css?v=${version}`} />
+  {swiper && <link rel="stylesheet" href={`${cssurl}swiper-bundle.min.css`} />}
+  <link rel="stylesheet" href={`${cssurl}all-custom.css?v=${version}`} />
+  <link rel="stylesheet" href={`${cssurl}all-responsive.css?v=${version}`} />
+  <link rel="stylesheet" href={`${cssurl}lenis.css`} />
+</head>
+
+<body class="body-line">
+  <slot />
+</body>
+
+</html>

@@ -1,0 +1,906 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Header from "../components/Header.astro";
+import FootScripts from "../components/FootScripts.astro";
+
+const imagesurl = "/media/images/";
+---
+
+<MainLayout
+  title="Services | Midnight Digital Pvt Ltd"
+  swiper={true}
+  page="home"
+  pagetype="onepage"
+>
+  <Header page="home" />
+
+  <section class="section-service p-0">
+    <div class="container custom-container-1840">
+      <div class="scroll-expand" id="scrollExpand">
+        <div class="scroll-expand__track" id="seTrack">
+          <div class="scroll-expand__stage" id="seStage">
+            <div class="scroll-expand__frame black-overlay" id="seFrame">
+              <img
+                class="scroll-expand__media"
+                id="seMedia"
+                src={`${imagesurl}services/what-we-do.webp`}
+                alt="Services"
+                draggable="false"
+              />
+              <div class="scroll-expand__scrim" id="seScrim"></div>
+            </div>
+            <div class="scroll-expand__title" id="seTitle">What we do?</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Cards Section - Sticky Scroll -->
+  <div class="service-cards-stack">
+    <div class="svc-card">
+      <div class="svc-card-inner svc-card-2col">
+        <div class="svc-card-left">
+          <h3 class="svc-card-title line-reveal">
+            AI-Powered Applications & Automation
+          </h3>
+          <p class="svc-card-desc line-reveal">
+            We build intelligent AI-powered applications that automate
+            repetitive processes, improve business efficiency, and enable
+            smarter decision-making. From AI-driven platforms and chatbots to
+            custom automation workflows, we integrate modern AI technologies
+            into scalable digital solutions tailored to your business needs.
+          </p>
+          <ul class="list-point line-reveal">
+            <li>Custom AI Application Development</li>
+            <li>AI-Powered Web Applications</li>
+            <li>AI Chatbot Development</li>
+            <li>AI Virtual Assistants</li>
+            <li>Business Process Automation</li>
+            <li>Workflow Automation</li>
+            <li>AI-Based Data Processing</li>
+            <li>Generative AI Solutions</li>
+            <li>OpenAI API Integration</li>
+            <li>AI Search & Recommendation Systems</li>
+            <li>Third-Party API & AI Integration</li>
+            <li>AI Model Integration</li>
+            <li>Intelligent Document Processing</li>
+            <li>Custom AI Automation Solutions</li>
+          </ul>
+          <div class="svc-card-tech-wrap">
+            <h6 class="svc-card-tech-title line-reveal">Technologies</h6>
+            <ul class="svc-card-tech-list line-reveal">
+              <li>OpenAI API</li>
+              <li>Python</li>
+              <li>Node.js</li>
+              <li>React.js</li>
+              <li>Next.js</li>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>REST API</li>
+              <li>GraphQL</li>
+              <li>Firebase</li>
+              <li>AWS</li>
+              <li>Docker</li>
+            </ul>
+          </div>
+        </div>
+        <div class="svc-card-right">
+          <div class="svc-card-img reveal-media">
+            <img
+              src={`${imagesurl}services/webdesign.webp`}
+              alt="Web Development"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc-card">
+      <div class="svc-card-inner svc-card-2col">
+        <div class="svc-card-left">
+          <h3 class="svc-card-title line-reveal">Web Development</h3>
+          <p class="svc-card-desc line-reveal">
+            We create modern, engaging, and user-focused websites that combine
+            creative design with seamless functionality. From corporate websites
+            and landing pages to interactive digital experiences, we design
+            responsive websites that strengthen your brand and convert visitors
+            into customers.
+          </p>
+          <ul class="list-point line-reveal">
+            <li>Corporate Website Design</li>
+            <li>Business Website Design</li>
+            <li>Landing Page Design</li>
+            <li>Custom Website Design</li>
+            <li>Responsive Web Design</li>
+            <li>UI-Focused Website Design</li>
+            <li>Interactive Website Design</li>
+            <li>Conversion-Focused Design</li>
+            <li>Website Redesign</li>
+            <li>Mobile-Friendly Design</li>
+            <li>Creative & Interactive Web Experiences</li>
+            <li>SEO-Friendly Website Structure</li>
+          </ul>
+          <div class="svc-card-tech-wrap">
+            <h6 class="svc-card-tech-title line-reveal">Technologies</h6>
+            <ul class="svc-card-tech-list line-reveal">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+              <li>React.js</li>
+              <li>Next.js</li>
+              <li>Tailwind CSS</li>
+              <li>Figma</li>
+            </ul>
+          </div>
+        </div>
+        <div class="svc-card-right">
+          <div class="svc-card-img reveal-media">
+            <img
+              src={`${imagesurl}services/webdesign.webp`}
+              alt="Web Development"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc-card">
+      <div class="svc-card-inner svc-card-2col">
+        <div class="svc-card-left">
+          <h3 class="svc-card-title line-reveal">App Development</h3>
+          <p class="svc-card-desc line-reveal">
+            We develop powerful and scalable mobile applications designed to
+            deliver smooth, secure, and engaging experiences across devices.
+            From business applications to customer-facing mobile products, we
+            build apps that support your business goals and future growth.
+          </p>
+          <ul class="list-point line-reveal">
+            <li>Android App Development</li>
+            <li>iOS App Development</li>
+            <li>Cross-Platform App Development</li>
+            <li>Custom Mobile Applications</li>
+            <li>Business Mobile Applications</li>
+            <li>E-commerce Mobile Apps</li>
+            <li>On-Demand Applications</li>
+            <li>API Integration</li>
+            <li>Push Notifications</li>
+            <li>Payment Gateway Integration</li>
+            <li>App Maintenance & Support</li>
+            <li>App Performance Optimization</li>
+          </ul>
+          <div class="svc-card-tech-wrap">
+            <h6 class="svc-card-tech-title line-reveal">Technologies</h6>
+            <ul class="svc-card-tech-list line-reveal">
+              <li>Flutter</li>
+              <li>React Native</li>
+              <li>Android</li>
+              <li>iOS</li>
+              <li>Firebase</li>
+              <li>Node.js</li>
+              <li>REST API</li>
+              <li>GraphQL</li>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+            </ul>
+          </div>
+        </div>
+        <div class="svc-card-right">
+          <div class="svc-card-img reveal-media">
+            <img
+              src={`${imagesurl}services/appdesign.webp`}
+              alt="Web Development"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc-card">
+      <div class="svc-card-inner svc-card-2col">
+        <div class="svc-card-left">
+          <h3 class="svc-card-title line-reveal">POC Development</h3>
+          <p class="svc-card-desc line-reveal">
+            We transform innovative ideas into functional Proof of Concept
+            solutions that help businesses validate technology, functionality,
+            and market potential before investing in full-scale development. Our
+            POC development approach helps reduce risks and accelerate product
+            decisions.
+          </p>
+          <ul class="list-point line-reveal">
+            <li>Idea Validation</li>
+            <li>Technical Feasibility Analysis</li>
+            <li>Functional Prototypes</li>
+            <li>MVP Prototyping</li>
+            <li>Feature Validation</li>
+            <li>API & System Integration</li>
+            <li>AI & Automation POC</li>
+            <li>UI/UX Prototyping</li>
+            <li>Technology Evaluation</li>
+            <li>Performance Testing</li>
+            <li>Rapid Prototyping</li>
+            <li>POC to Product Development</li>
+          </ul>
+          <div class="svc-card-tech-wrap">
+            <h6 class="svc-card-tech-title line-reveal">Technologies</h6>
+            <ul class="svc-card-tech-list line-reveal">
+              <li>React.js</li>
+              <li>Next.js</li>
+              <li>Node.js</li>
+              <li>Python</li>
+              <li>PHP</li>
+              <li>Flutter</li>
+              <li>React Native</li>
+              <li>OpenAI API</li>
+              <li>REST API</li>
+              <li>Firebase</li>
+              <li>AWS</li>
+            </ul>
+          </div>
+        </div>
+        <div class="svc-card-right">
+          <div class="svc-card-img reveal-media">
+            <img
+              src={`${imagesurl}services/poc-dev.webp`}
+              alt="Web Development"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc-card">
+      <div class="svc-card-inner svc-card-2col">
+        <div class="svc-card-left">
+          <h3 class="svc-card-title line-reveal">
+            Custom Software Development
+          </h3>
+          <p class="svc-card-desc line-reveal">
+            We build tailor-made software solutions designed around your unique
+            business processes, requirements, and workflows. From internal
+            business systems to complex enterprise applications, our solutions
+            are scalable, secure, and built for long-term growth.
+          </p>
+          <ul class="list-point line-reveal">
+            <li>Custom Business Software</li>
+            <li>Enterprise Software Development</li>
+            <li>Business Management Systems</li>
+            <li>CRM Development</li>
+            <li>ERP Development</li>
+            <li>Workflow Automation</li>
+            <li>Inventory Management Systems</li>
+            <li>Employee Management Systems</li>
+            <li>Custom Dashboard Development</li>
+            <li>Third-Party API Integration</li>
+            <li>Cloud-Based Software Solutions</li>
+            <li>Software Maintenance & Support</li>
+          </ul>
+          <div class="svc-card-tech-wrap">
+            <h6 class="svc-card-tech-title line-reveal">Technologies</h6>
+            <ul class="svc-card-tech-list line-reveal">
+              <li>PHP</li>
+              <li>Laravel</li>
+              <li>Node.js</li>
+              <li>React.js</li>
+              <li>Next.js</li>
+              <li>Vue.js</li>
+              <li>Python</li>
+              <li>MySQL</li>
+              <li>PostgreSQL</li>
+              <li>MongoDB</li>
+              <li>AWS</li>
+              <li>Docker</li>
+            </ul>
+          </div>
+        </div>
+        <div class="svc-card-right">
+          <div class="svc-card-img reveal-media">
+            <img
+              src={`${imagesurl}services/custom-software-development.webp`}
+              alt="Custom Software Development"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc-card">
+      <div class="svc-card-inner svc-card-2col">
+        <div class="svc-card-left">
+          <h3 class="svc-card-title line-reveal">Product Development</h3>
+          <p class="svc-card-desc line-reveal">
+            We help businesses transform ideas into scalable digital products
+            through a complete product development process. From initial concept
+            and validation to design, development, launch, and continuous
+            improvement, we build products focused on usability, performance,
+            and growth.
+          </p>
+          <ul class="list-point line-reveal">
+            <li>Product Strategy & Planning</li>
+            <li>Product Discovery</li>
+            <li>MVP Development</li>
+            <li>SaaS Product Development</li>
+            <li>Custom Product Development</li>
+            <li>Product UI/UX Design</li>
+            <li>Web Product Development</li>
+            <li>Mobile Product Development</li>
+            <li>API & Backend Development</li>
+            <li>Third-Party Integrations</li>
+            <li>Product Testing & Optimization</li>
+            <li>Product Maintenance & Support</li>
+          </ul>
+          <div class="svc-card-tech-wrap">
+            <h6 class="svc-card-tech-title line-reveal">Technologies</h6>
+            <ul class="svc-card-tech-list line-reveal">
+              <li>React.js</li>
+              <li>Next.js</li>
+              <li>Node.js</li>
+              <li>Laravel</li>
+              <li>Python</li>
+              <li>Flutter</li>
+              <li>React Native</li>
+              <li>MySQL</li>
+              <li>PostgreSQL</li>
+              <li>MongoDB</li>
+              <li>AWS</li>
+              <li>Docker</li>
+            </ul>
+          </div>
+        </div>
+        <div class="svc-card-right">
+          <div class="svc-card-img reveal-media">
+            <img
+              src={`${imagesurl}services/digital-product.webp`}
+              alt="Product Development"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc-card">
+      <div class="svc-card-inner svc-card-2col">
+        <div class="svc-card-left">
+          <h3 class="svc-card-title line-reveal">E-Commerce Development</h3>
+          <p class="svc-card-desc line-reveal">
+            We build secure, scalable, and conversion-focused e-commerce
+            platforms that provide seamless shopping experiences across devices.
+            From custom online stores to advanced e-commerce solutions, we
+            develop platforms designed to simplify operations and drive online
+            sales.
+          </p>
+          <ul class="list-point line-reveal">
+            <li>Custom E-Commerce Development</li>
+            <li>B2B E-Commerce Solutions</li>
+            <li>B2C E-Commerce Solutions</li>
+            <li>Custom Online Stores</li>
+            <li>Product Catalog Development</li>
+            <li>Shopping Cart Development</li>
+            <li>Wishlist & Product Comparison</li>
+            <li>Secure Checkout</li>
+            <li>Payment Gateway Integration</li>
+            <li>Order Management</li>
+            <li>Inventory Management</li>
+            <li>Shipping & Tax Integration</li>
+            <li>E-Commerce API Integration</li>
+            <li>E-Commerce Maintenance & Support</li>
+          </ul>
+          <div class="svc-card-tech-wrap">
+            <h6 class="svc-card-tech-title line-reveal">Technologies</h6>
+            <ul class="svc-card-tech-list line-reveal">
+              <li>PHP</li>
+              <li>Laravel</li>
+              <li>React.js</li>
+              <li>Next.js</li>
+              <li>Node.js</li>
+              <li>MySQL</li>
+              <li>MongoDB</li>
+              <li>REST API</li>
+              <li>Stripe</li>
+              <li>Razorpay</li>
+              <li>AWS</li>
+              <li>Docker</li>
+            </ul>
+          </div>
+        </div>
+        <div class="svc-card-right">
+          <div class="svc-card-img reveal-media">
+            <img
+              src={`${imagesurl}services/ecommerce-product.webp`}
+              alt="E-Commerce Development"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc-card">
+      <div class="svc-card-inner svc-card-2col">
+        <div class="svc-card-left">
+          <h3 class="svc-card-title line-reveal">Website Development</h3>
+          <p class="svc-card-desc line-reveal">
+            We build fast, secure, and scalable websites tailored to your
+            business needs. From corporate websites and custom web applications
+            to high-performance digital platforms, we deliver responsive
+            websites using modern technologies and development practices.
+          </p>
+          <ul class="list-point line-reveal">
+            <li>Corporate Website Development</li>
+            <li>Custom Web Applications</li>
+            <li>Business Website Development</li>
+            <li>Responsive Website Development</li>
+            <li>Dynamic Website Development</li>
+            <li>Landing Page Development</li>
+            <li>Website Redesign & Migration</li>
+            <li>API Integration</li>
+            <li>Third-Party Integrations</li>
+            <li>Performance Optimization</li>
+            <li>SEO-Friendly Development</li>
+            <li>Website Maintenance & Support</li>
+          </ul>
+          <div class="svc-card-tech-wrap">
+            <h6 class="svc-card-tech-title line-reveal">Technologies</h6>
+            <ul class="svc-card-tech-list line-reveal">
+              <li>PHP</li>
+              <li>Laravel</li>
+              <li>React.js</li>
+              <li>Next.js</li>
+              <li>Node.js</li>
+              <li>Vue.js</li>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>Tailwind CSS</li>
+              <li>Bootstrap</li>
+              <li>MySQL</li>
+              <li>PostgreSQL</li>
+              <li>MongoDB</li>
+              <li>REST API</li>
+              <li>AWS</li>
+              <li>Docker</li>
+            </ul>
+          </div>
+        </div>
+        <div class="svc-card-right">
+          <div class="svc-card-img reveal-media">
+            <img src={`${imagesurl}services/webdesign.webp`} alt="webdesign" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc-card">
+      <div class="svc-card-inner svc-card-2col">
+        <div class="svc-card-left">
+          <h3 class="svc-card-title line-reveal">CMS Development</h3>
+          <p class="svc-card-desc line-reveal">
+            We develop flexible and easy-to-manage Content Management Systems
+            that allow businesses to control, update, and publish website
+            content without relying on technical teams. Our CMS solutions are
+            designed for scalability, security, and ease of use.
+          </p>
+          <ul class="list-point line-reveal">
+            <li>Custom CMS Development</li>
+            <li>WordPress Development</li>
+            <li>Headless CMS Development</li>
+            <li>Custom Admin Panels</li>
+            <li>Content Management Systems</li>
+            <li>Blog & Publishing Platforms</li>
+            <li>Custom Theme Development</li>
+            <li>Plugin & Module Development</li>
+            <li>CMS Migration</li>
+            <li>API-Based CMS Integration</li>
+            <li>User & Role Management</li>
+            <li>CMS Maintenance & Support</li>
+          </ul>
+          <div class="svc-card-tech-wrap">
+            <h6 class="svc-card-tech-title line-reveal">Technologies</h6>
+            <ul class="svc-card-tech-list line-reveal">
+              <li>WordPress</li>
+              <li>PHP</li>
+              <li>Laravel</li>
+              <li>React.js</li>
+              <li>Next.js</li>
+              <li>Node.js</li>
+              <li>JavaScript</li>
+              <li>MySQL</li>
+              <li>MongoDB</li>
+              <li>REST API</li>
+              <li>GraphQL</li>
+            </ul>
+          </div>
+        </div>
+        <div class="svc-card-right">
+          <div class="svc-card-img reveal-media">
+            <img
+              src={`${imagesurl}services/cms-development.webp`}
+              alt="cms development"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc-card">
+      <div class="svc-card-inner svc-card-2col">
+        <div class="svc-card-left">
+          <h3 class="svc-card-title line-reveal">Social Media</h3>
+          <p class="svc-card-desc line-reveal">
+            We help brands build a strong digital presence through strategic
+            social media design, content, and engagement. Our social media
+            solutions focus on creating consistent brand communication, engaging
+            content, and campaigns that connect businesses with their target
+            audience.
+          </p>
+          <ul class="list-point line-reveal">
+            <li>Social Media Strategy</li>
+            <li>Social Media Management</li>
+            <li>Social Media Marketing</li>
+            <li>Content Creation</li>
+            <li>Creative Post Design</li>
+            <li>Brand Communication</li>
+            <li>Social Media Campaigns</li>
+            <li>Instagram Marketing</li>
+            <li>Facebook Marketing</li>
+            <li>LinkedIn Marketing</li>
+            <li>Performance Tracking & Analytics</li>
+            <li>Social Media Optimization</li>
+          </ul>
+          <div class="svc-card-tech-wrap">
+            <h6 class="svc-card-tech-title line-reveal">Technologies</h6>
+            <ul class="svc-card-tech-list line-reveal">
+              <li>Canva</li>
+              <li>Adobe Photoshop</li>
+              <li>Adobe Illustrator</li>
+              <li>Meta Business Suite</li>
+              <li>Google Analytics</li>
+              <li>Google Ads</li>
+              <li>Meta Ads</li>
+            </ul>
+          </div>
+        </div>
+        <div class="svc-card-right">
+          <div class="svc-card-img reveal-media">
+            <img
+              src={`${imagesurl}services/social mdeia.webp`}
+              alt="Social Media"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc-card">
+      <div class="svc-card-inner svc-card-2col">
+        <div class="svc-card-left">
+          <h3 class="svc-card-title line-reveal">UI / UX Design</h3>
+          <p class="svc-card-desc line-reveal">
+            We create intuitive and visually engaging digital experiences that
+            balance aesthetics, usability, and business goals. Our UI/UX process
+            focuses on understanding users, simplifying interactions, and
+            designing interfaces that are both beautiful and easy to use.
+          </p>
+          <ul class="list-point line-reveal">
+            <li>User Research</li>
+            <li>UX Strategy</li>
+            <li>Information Architecture</li>
+            <li>User Flow Design</li>
+            <li>Wireframing</li>
+            <li>Interactive Prototyping</li>
+            <li>Website UI Design</li>
+            <li>Mobile App UI Design</li>
+            <li>Dashboard UI Design</li>
+            <li>Design System Development</li>
+            <li>Responsive Interface Design</li>
+            <li>Usability Testing</li>
+            <li>UI/UX Redesign</li>
+          </ul>
+          <div class="svc-card-tech-wrap">
+            <h6 class="svc-card-tech-title line-reveal">Technologies</h6>
+            <ul class="svc-card-tech-list line-reveal">
+              <li>Figma</li>
+              <li>Adobe XD</li>
+              <li>Adobe Photoshop</li>
+              <li>Adobe Illustrator</li>
+              <li>Framer</li>
+              <li>FigJam</li>
+            </ul>
+          </div>
+        </div>
+        <div class="svc-card-right">
+          <div class="svc-card-img reveal-media">
+            <img src={`${imagesurl}services/ux.webp`} alt="UI / UX Design" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section-footer section-xs pt-0">
+    <div class="theme-h-line theme-outerline-left"></div>
+    <div class="container custom-container-1840">
+      <div class="contact-us-title section-xs pb-0">
+        <div class="section-title mb-0">
+          <h3 class="fw-500 is-uppercase font-orbitron pl-4">Let's Talk</h3>
+          <div class="theme-h-line"></div>
+        </div>
+        <div class="section-title pl-4">
+          <h2 class="text-roll">Contact Us</h2>
+        </div>
+      </div>
+      <div class="theme-h-line theme-outerline-left theme-outerline-right">
+      </div>
+      <div class="footer-box">
+        <div class="media-wrapper">
+          <div class="footer-logo pl-4">
+            <picture>
+              <img
+                src={`${imagesurl}logo.svg`}
+                alt="Midnight Digital Logo"
+                width="145"
+                height="70"
+              />
+            </picture>
+          </div>
+          <div class="social-links">
+            <ul>
+              {
+                ["Facebook", "Instagram", "LinkedIn", "Twitter"].map(
+                  (social) => (
+                    <li>
+                      <a href="#">
+                        {social}
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                        >
+                          <>
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M9.707 5.293l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 1 1 -1.414 -1.414l5.293 -5.293l-5.293 -5.293a1 1 0 0 1 1.414 -1.414" />
+                          </>
+                        </svg>
+                      </a>
+                    </li>
+                  ),
+                )
+              }
+            </ul>
+          </div>
+          <div class="copyright-text pl-4">
+            <p>Copyright &copy; <b>Midnight</b> {new Date().getFullYear()}</p>
+          </div>
+        </div>
+      </div>
+      <div class="theme-h-line theme-outerline-left theme-outerline-right">
+      </div>
+    </div>
+  </section>
+
+  <FootScripts page="home" pagetype="onepage" />
+
+  <!-- ScrollExpand Animation (useWindowScroll: true) -->
+  <script is:inline>
+    (function () {
+      var track = document.getElementById("seTrack");
+      var stage = document.getElementById("seStage");
+      var frame = document.getElementById("seFrame");
+      var media = document.getElementById("seMedia");
+      var titleEl = document.getElementById("seTitle");
+      var scrim = document.getElementById("seScrim");
+
+      if (!track || !stage || !frame || !media) return;
+
+      // Config
+      var startWidth = 55;
+      var startHeight = 80;
+      var startRadius = 24;
+      var endRadius = 0;
+      var mediaZoom = 1.15;
+      var scrollDistance = 0.25;
+      var holdDistance = 0;
+      var smoothing = 0.12;
+      var overlayScrim = 0.45;
+
+      var current = 0;
+      var target = 0;
+      var stageH = 0;
+      var raf = 0;
+      var running = false;
+
+      function clamp(v, a, b) {
+        return v < a ? a : v > b ? b : v;
+      }
+      function smoothstep(edge0, edge1, x) {
+        var t = clamp((x - edge0) / (edge1 - edge0 || 1e-6), 0, 1);
+        return t * t * (3 - 2 * t);
+      }
+
+      function applyProgress(p) {
+        var e = smoothstep(0, 1, p);
+        var w = startWidth + (100 - startWidth) * e;
+        var h = startHeight + (100 - startHeight) * e;
+        var ix = Math.max(0, (100 - w) / 2);
+        var iy = Math.max(0, (100 - h) / 2);
+        var r = startRadius + (endRadius - startRadius) * e;
+
+        frame.style.clipPath =
+          "inset(" +
+          iy +
+          "% " +
+          ix +
+          "% " +
+          iy +
+          "% " +
+          ix +
+          "% round " +
+          r +
+          "px)";
+        media.style.transform =
+          "scale(" + (mediaZoom + (1 - mediaZoom) * e) + ")";
+
+        if (scrim) scrim.style.opacity = "" + overlayScrim * e;
+
+        if (titleEl) {
+          var out = smoothstep(0.4, 0.88, p);
+          titleEl.style.opacity = "" + (1 - out);
+          titleEl.style.transform =
+            "translate3d(0, " +
+            -28 * out +
+            "px, 0) scale(" +
+            (1 + 0.06 * out) +
+            ")";
+        }
+      }
+
+      function measure() {
+        stageH = window.innerHeight;
+        if (stageH <= 0) return;
+        stage.style.height = stageH + "px";
+        track.style.height =
+          stageH *
+            (1 + Math.max(0, scrollDistance) + Math.max(0, holdDistance)) +
+          "px";
+        var w = stage.clientWidth || stageH;
+        stage.style.setProperty(
+          "--se-title-size",
+          clamp(w * 0.075, 20, 84) + "px",
+        );
+      }
+
+      function readProgress() {
+        var span = stageH * Math.max(0.01, scrollDistance);
+        var top = track.getBoundingClientRect().top;
+        return clamp(-top / span, 0, 1);
+      }
+
+      function tick() {
+        var k = smoothing <= 0 ? 1 : 1 - Math.exp(-1 / (60 * smoothing));
+        current += (target - current) * k;
+        if (Math.abs(target - current) < 0.0004) {
+          current = target;
+          running = false;
+        }
+        applyProgress(current);
+        raf = running ? requestAnimationFrame(tick) : 0;
+      }
+
+      function kick() {
+        if (running) return;
+        running = true;
+        if (!raf) raf = requestAnimationFrame(tick);
+      }
+
+      function onScroll() {
+        target = readProgress();
+        if (smoothing <= 0) {
+          current = target;
+          applyProgress(current);
+          return;
+        }
+        kick();
+      }
+
+      function onResize() {
+        measure();
+        target = readProgress();
+        current = target;
+        applyProgress(current);
+      }
+
+      measure();
+      target = readProgress();
+      current = target;
+      applyProgress(current);
+
+      window.addEventListener("scroll", onScroll, { passive: true });
+      window.addEventListener("resize", onResize);
+      new ResizeObserver(onResize).observe(stage);
+    })();
+  </script>
+
+  <!-- Service Cards Sticky Animation -->
+  <script is:inline>
+    /**
+     * Service Cards Scroll Animation
+     *
+     * Approach: GSAP ScrollTrigger with pin.
+     * - Cards stacked via position: absolute
+     * - Current card scales down + rotates as it exits
+     * - Next card slides up from below (yPercent: 100 → 0)
+     *
+     * Performance optimizations:
+     * - scrub: true (no additional smoothing — Lenis already handles it)
+     * - force3D: true on all animated elements (GPU compositing)
+     * - Only transform + opacity animated (no layout properties)
+     * - will-change set via CSS, cleared is unnecessary here since cards persist
+     */
+    (function () {
+      if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined")
+        return;
+
+      gsap.registerPlugin(ScrollTrigger);
+
+      var wrapper = document.querySelector(".service-cards-stack");
+      var cards = gsap.utils.toArray(".service-cards-stack .svc-card");
+      var totalCards = cards.length;
+      if (!totalCards || !wrapper) return;
+
+      // Set z-index stacking order and initial positions
+      // force3D promotes each card to its own GPU layer
+      cards.forEach(function (card, i) {
+        card.style.zIndex = i;
+        gsap.set(card, {
+          yPercent: i === 0 ? 0 : 100,
+          force3D: true,
+        });
+      });
+
+      // Pin the container and create scroll-linked timeline
+      // scrub: true = direct 1:1 mapping with scroll (no additional easing)
+      // Lenis already provides smooth scroll interpolation (duration: 2)
+      // Adding scrub smoothing on top of Lenis causes double-buffering lag
+      var tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: wrapper,
+          start: "top top",
+          end: "+=" + window.innerHeight * totalCards,
+          pin: true,
+          scrub: true,
+          pinSpacing: true,
+          invalidateOnRefresh: true,
+        },
+      });
+
+      // Animation sequence:
+      // - Next card slides up from below (yPercent 100 → 0)
+      // - Current card stays in place (simple sticky stack)
+      cards.forEach(function (card, i) {
+        if (i === totalCards - 1) return;
+
+        tl.to(
+          cards[i + 1],
+          {
+            yPercent: 0,
+            duration: 1,
+            ease: "none",
+            force3D: true,
+          },
+          i,
+        );
+      });
+
+      // Refresh ScrollTrigger on resize to recalculate pin positions
+      var resizeTimer;
+      window.addEventListener("resize", function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function () {
+          ScrollTrigger.refresh();
+        }, 200);
+      });
+    })();
+  </script>
+</MainLayout>

@@ -1,0 +1,836 @@
+---
+interface Props {
+  page?: string;
+  pagetype?: string;
+}
+
+const {
+  page = "home",
+  pagetype = "onepage",
+} = Astro.props;
+
+const jsurl = "/media/js/";
+---
+
+<!-- Core JS Libraries -->
+<script src={`${jsurl}gsap.min.js`} is:inline></script>
+<script src={`${jsurl}ScrollTrigger.min.js`} is:inline></script>
+<script src={`${jsurl}gsap-split-text.js`} is:inline></script>
+<script src={`${jsurl}ScrambleTextPlugin.min.js`} is:inline></script>
+<script src={`${jsurl}lenis.min.js`} is:inline></script>
+
+<script is:inline>
+	/**Menu Toggle**/
+	let body = document.querySelector('body')
+	let toggle = document.querySelector('#menu-trigger')
+	let themeMenu = document.querySelector('.theme-menu')
+	if (toggle && themeMenu) {
+		// Move .theme-menu and .insomenu-bars to body to escape all stacking contexts
+		if (window.innerWidth <= 1216) {
+			document.body.appendChild(themeMenu)
+			document.body.appendChild(toggle)
+		}
+		toggle.addEventListener('click', () => {
+			body.classList.toggle('insomenu-active')
+			// Stop/start Lenis scroll when menu is toggled
+			if (window._lenis) {
+				if (body.classList.contains('insomenu-active')) {
+					window._lenis.stop()
+				} else {
+					window._lenis.start()
+				}
+			}
+		})
+	}
+	/**End Menu Toggle**/
+
+	/* Back To Top Js Start */
+	var scrollToTopBtn = document.querySelector(".scroll-to-top")
+	var rootElement = document.documentElement
+
+	function handleScroll() {
+		var scrollTotal = rootElement.scrollHeight - rootElement.clientHeight
+		if ((rootElement.scrollTop / scrollTotal) > 0.01) {
+			scrollToTopBtn.classList.add("showBtn")
+		} else {
+			scrollToTopBtn.classList.remove("showBtn")
+		}
+	}
+
+	function scrollToTop() {
+		rootElement.scrollTo({
+			top: 0,
+			behavior: "smooth"
+		})
+	}
+	if (scrollToTopBtn) {
+		scrollToTopBtn.addEventListener("click", scrollToTop);
+		document.addEventListener("scroll", handleScroll);
+	}
+	/* Back To Top Js End */
+
+	/***Form Toggle***/
+	function opencForm() {
+		var myButtonClasses = document.getElementById("sticky-bottom-form");
+		if (myButtonClasses) {
+			myButtonClasses.classList.toggle("open");
+		}
+	}
+
+	function closecForm() {
+		var myButtonClasses = document.getElementById("sticky-bottom-form");
+		if (myButtonClasses) {
+			myButtonClasses.classList.toggle("open");
+		}
+	}
+
+	function openForm(formtyp) {
+		const body = document.querySelector('html');
+		body.classList.add('is-active');
+		var myButtonClasses = document.getElementById("register-modal");
+		if (!myButtonClasses) return;
+		var formtype = document.getElementById("formtype");
+		if (myButtonClasses.classList.contains("is-active")) {
+			myButtonClasses.classList.remove("is-active");
+			if (formtype) formtype.value = '';
+		} else {
+			myButtonClasses.classList.add("is-active");
+			if (formtype) formtype.value = formtyp;
+		}
+	}
+
+	function closeForm() {
+		const body = document.querySelector('html');
+		body.classList.remove('is-active');
+		var myButtonClasses = document.getElementById("register-modal");
+		if (myButtonClasses) {
+			myButtonClasses.classList.remove("is-active");
+		}
+	}
+	/***End Form Toggle***/
+
+	/**Modal**/
+	function closeModel(modelid) {
+		let model = document.querySelector('#' + modelid);
+		if (model) model.classList.remove('is-active');
+		let html = document.querySelector('html');
+		html.classList.remove('is-active-1');
+	}
+
+	function openModel(modelid) {
+		let model = document.querySelector('#' + modelid);
+		if (model) model.classList.add('is-active');
+		let html = document.querySelector('html');
+		html.classList.add('is-active-1');
+	}
+	/**End Modal**/
+</script>
+
+<script is:inline>
+	const lenis = new Lenis({
+		duration: 2,
+		easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+		smoothWheel: true
+	});
+
+	window._lenis = lenis;
+
+	lenis.on('scroll', ScrollTrigger.update);
+
+	gsap.ticker.add((time) => {
+		lenis.raf(time * 1000);
+	});
+
+	gsap.ticker.lagSmoothing(0);
+</script>
+
+<!-- text change -->
+<script is:inline>
+	gsap.utils.toArray(".scramble-text").forEach((el) => {
+		if (!el.dataset.text) return;
+		const texts = JSON.parse(el.dataset.text);
+
+		const tl = gsap.timeline({
+			repeat: -1,
+			repeatDelay: 2.5
+		});
+
+		// First text already visible
+		for (let i = 1; i < texts.length; i++) {
+			tl.to(el, {
+				duration: 1.8,
+				ease: "power2.inOut",
+				scrambleText: {
+					text: texts[i],
+					chars: "upperAndLowerCase",
+					revealDelay: 0.2,
+					speed: 0.35
+				}
+			});
+
+			// Hold the text before next transition
+			tl.to({}, {
+				duration: 4
+			});
+		}
+
+		// Back to first text
+		tl.to(el, {
+			duration: 1.8,
+			ease: "power2.inOut",
+			scrambleText: {
+				text: texts[0],
+				chars: "upperAndLowerCase",
+				revealDelay: 0.2,
+				speed: 0.35
+			}
+		});
+
+		tl.to({}, {
+			duration: 2
+		});
+	});
+</script>
+
+<!-- Text Roll Animation -->
+<script is:inline>
+	document.addEventListener("DOMContentLoaded", () => {
+
+		const STAGGER = 35; // milliseconds
+
+		document.querySelectorAll(".text-roll").forEach(el => {
+
+			if (el.dataset.rollInit) return;
+			el.dataset.rollInit = true;
+
+			const text = el.textContent;
+			el.textContent = "";
+
+			const wrap = document.createElement("span");
+			wrap.className = "tr-wrap";
+
+			const top = document.createElement("span");
+			top.className = "tr-top";
+
+			const bottom = document.createElement("span");
+			bottom.className = "tr-bottom";
+
+			[...text].forEach((char, index) => {
+
+				const topChar = document.createElement("span");
+				topChar.className = "char";
+				topChar.innerHTML = char === " " ? "&nbsp;" : char;
+				topChar.style.transitionDelay = `${index * STAGGER}ms`;
+
+				const bottomChar = document.createElement("span");
+				bottomChar.className = "char";
+				bottomChar.innerHTML = char === " " ? "&nbsp;" : char;
+				bottomChar.style.transitionDelay = `${index * STAGGER}ms`;
+
+				top.appendChild(topChar);
+				bottom.appendChild(bottomChar);
+
+			});
+
+			wrap.appendChild(top);
+			wrap.appendChild(bottom);
+			el.appendChild(wrap);
+
+		});
+
+	});
+</script>
+
+<script is:inline>
+	gsap.registerPlugin(ScrollTrigger);
+
+	gsap.utils.toArray(".image-container").forEach(function(container) {
+		let image = container.querySelector("img");
+
+		if (!image) return;
+
+		let tl = gsap.timeline({
+			scrollTrigger: {
+				trigger: container,
+				scrub: true,
+				pin: false,
+			},
+		});
+		tl.from(image, {
+			yPercent: -15,
+			ease: "none",
+		}).to(image, {
+			yPercent: 15,
+			ease: "none",
+		});
+	});
+</script>
+
+<script is:inline>
+	gsap.registerPlugin(ScrollTrigger);
+
+	function setupMarqueeAnimation() {
+		const marqueeItems = gsap.utils.toArray(".marquee h1, .marquee h3");
+
+		if (!marqueeItems.length) return;
+
+		horizontalLoop(marqueeItems, {
+			repeat: -1,
+			speed: 1,
+			paddingRight: 30
+		});
+	}
+
+	window.addEventListener("load", setupMarqueeAnimation);
+
+	function horizontalLoop(items, config) {
+
+		items = gsap.utils.toArray(items);
+		config = config || {};
+
+		let tl = gsap.timeline({
+			repeat: config.repeat || -1,
+			paused: config.paused || false,
+			defaults: {
+				ease: "none"
+			}
+		});
+
+		let length = items.length,
+			startX = items[0].offsetLeft,
+			widths = [],
+			xPercents = [],
+			pixelsPerSecond = (config.speed || 1) * 100,
+			totalWidth,
+			curX,
+			distanceToStart,
+			distanceToLoop,
+			item,
+			i;
+
+		gsap.set(items, {
+			xPercent: function(i, el) {
+
+				let w = widths[i] = parseFloat(gsap.getProperty(el, "width", "px"));
+
+				xPercents[i] =
+					(parseFloat(gsap.getProperty(el, "x", "px")) / w) * 100 +
+					gsap.getProperty(el, "xPercent");
+
+				return xPercents[i];
+			}
+		});
+
+		gsap.set(items, {
+			x: 0
+		});
+
+		totalWidth =
+			items[length - 1].offsetLeft +
+			(xPercents[length - 1] / 100) * widths[length - 1] -
+			startX +
+			items[length - 1].offsetWidth *
+			gsap.getProperty(items[length - 1], "scaleX") +
+			(parseFloat(config.paddingRight) || 0);
+
+		for (i = 0; i < length; i++) {
+
+			item = items[i];
+
+			curX = (xPercents[i] / 100) * widths[i];
+
+			distanceToStart = item.offsetLeft + curX - startX;
+
+			distanceToLoop = distanceToStart + widths[i] * gsap.getProperty(item, "scaleX");
+
+			tl.to(item, {
+					xPercent: ((curX - distanceToLoop) / widths[i]) * 100,
+					duration: distanceToLoop / pixelsPerSecond
+				}, 0)
+
+				.fromTo(item, {
+					xPercent: ((curX - distanceToLoop + totalWidth) / widths[i]) * 100
+				}, {
+					xPercent: xPercents[i],
+					duration: (totalWidth - distanceToLoop) / pixelsPerSecond,
+					immediateRender: false
+				}, distanceToLoop / pixelsPerSecond);
+
+		}
+
+		tl.progress(1, true).progress(0, true);
+
+		return tl;
+	}
+</script>
+
+<script is:inline>
+	const cards = gsap.utils.toArray(".section-process .card");
+
+	if (cards.length) {
+		const introCard = cards[0];
+
+		const titles = gsap.utils.toArray(".card-title h4");
+
+		if (typeof SplitText !== 'undefined') {
+			titles.forEach((title) => {
+				const split = new SplitText(title, {
+					type: "chars",
+					charsClass: "char",
+					tag: "div",
+				});
+
+				split.chars.forEach((char) => {
+					char.innerHTML = `<span>${char.textContent}</span>`;
+				});
+			});
+		}
+
+		const cardImgWrapper = introCard.querySelector(".card-img");
+		const cardImg = introCard.querySelector(".card-img img") || introCard.querySelector(".card-img video");
+
+		if (cardImgWrapper) {
+			gsap.set(cardImgWrapper, {
+				scale: 0.5,
+				borderRadius: "400px"
+			});
+		}
+
+		if (cardImg) {
+			gsap.set(cardImg, {
+				scale: 1.5
+			});
+		}
+
+		function animateContentIn(titleChars, description) {
+			gsap.to(titleChars, {
+				x: "0%",
+				duration: 0.75,
+				ease: "power4.out"
+			});
+
+			gsap.to(description, {
+				x: 0,
+				opacity: 1,
+				duration: 0.75,
+				delay: 0.1,
+				ease: "power4.out"
+			});
+		}
+
+		function animateContentOut(titleChars, description) {
+			gsap.to(titleChars, {
+				x: "100%",
+				duration: 0.5,
+				ease: "power4.in"
+			});
+
+			gsap.to(description, {
+				x: 50,
+				opacity: 0,
+				duration: 0.5,
+				ease: "power4.in"
+			});
+		}
+
+		const marquee = introCard.querySelector(".card-marquee .marquee");
+		const titleChars = introCard.querySelectorAll(".char span");
+		const description = introCard.querySelector(".card-description");
+
+		// Marquee infinite scroll animation
+		function setupCardMarquee() {
+			const marqueeEl = document.querySelector(".card-marquee .marquee");
+			if (!marqueeEl) return;
+
+			// Clone content for seamless loop
+			const clone = marqueeEl.innerHTML;
+			marqueeEl.innerHTML += clone;
+
+			const totalWidth = marqueeEl.scrollWidth / 2;
+
+			gsap.to(marqueeEl, {
+				x: -totalWidth,
+				duration: 20,
+				ease: "none",
+				repeat: -1,
+			});
+		}
+
+		setupCardMarquee();
+
+		if (cardImgWrapper && cardImg) {
+			ScrollTrigger.create({
+				trigger: introCard,
+				start: "top top",
+				end: "+=300vh",
+
+				onUpdate: (self) => {
+
+					const progress = self.progress;
+					const imgScale = 0.5 + progress * 0.5;
+					const borderRadius = 400 - progress * 375;
+					const innerImgScale = 1.5 - progress * 0.5;
+
+					gsap.set(cardImgWrapper, {
+						scale: imgScale,
+						borderRadius: `${borderRadius}px`
+					});
+
+					gsap.set(cardImg, {
+						scale: innerImgScale
+					});
+
+					if (marquee) {
+						if (imgScale >= 0.5 && imgScale <= 0.75) {
+
+							const fadeProgress = (imgScale - 0.5) / (0.75 - 0.5);
+
+							gsap.set(marquee, {
+								opacity: 1 - fadeProgress
+							});
+
+						} else if (imgScale < 0.5) {
+
+							gsap.set(marquee, {
+								opacity: 1
+							});
+
+						} else {
+
+							gsap.set(marquee, {
+								opacity: 0
+							});
+
+						}
+					}
+				}
+			});
+		}
+
+		cards.forEach((card, index) => {
+
+			const isLastCard = index === cards.length - 1;
+
+			ScrollTrigger.create({
+				trigger: card,
+				start: "top top",
+				end: isLastCard ? "+=100vh" : "top top",
+				endTrigger: isLastCard ? null : cards[cards.length - 1],
+				pin: true,
+				pinSpacing: isLastCard,
+			});
+
+		});
+
+		cards.forEach((card, index) => {
+
+			if (index < cards.length - 1) {
+
+				const cardWrapper = card.querySelector(".card-wrapper");
+
+				if (cardWrapper) {
+					ScrollTrigger.create({
+						trigger: cards[index + 1],
+						start: "top bottom",
+						end: "top top",
+
+						onUpdate: (self) => {
+
+							const progress = self.progress;
+
+							gsap.set(cardWrapper, {
+								scale: 1 - progress * 0.25,
+								opacity: 1 - progress
+							});
+
+						}
+					});
+				}
+
+			}
+
+		});
+
+		cards.forEach((card, index) => {
+
+			if (index > 0) {
+
+				const cardImg = card.querySelector(".card-img img");
+				const imgContainer = card.querySelector(".card-img");
+
+				if (cardImg && imgContainer) {
+					ScrollTrigger.create({
+						trigger: card,
+						start: "top bottom",
+						end: "top top",
+
+						onUpdate: (self) => {
+
+							const progress = self.progress;
+
+							gsap.set(cardImg, {
+								scale: 2 - progress
+							});
+
+							gsap.set(imgContainer, {
+								borderRadius: `${150 - progress * 125}px`
+							});
+
+						}
+					});
+				}
+
+			}
+
+		});
+
+		cards.forEach((card, index) => {
+
+			if (index === 0) return;
+
+			const cardDescription = card.querySelector(".card-description");
+			const cardTitleChars = card.querySelectorAll(".char span");
+
+			if (cardDescription && cardTitleChars.length) {
+				ScrollTrigger.create({
+					trigger: card,
+					start: "top top",
+
+					onEnter: () => animateContentIn(cardTitleChars, cardDescription),
+
+					onLeaveBack: () => animateContentOut(cardTitleChars, cardDescription)
+				});
+			}
+
+		});
+	}
+</script>
+
+<script is:inline>
+	/* ------------------------------
+   PARALLAX
+------------------------------ */
+
+	const gallery = document.querySelector(".parallax-gallery");
+
+	if (gallery) {
+		const viewportHeight = window.innerHeight;
+
+		const columns = [{
+			el: ".column-1",
+			distance: viewportHeight * 2
+		}, {
+			el: ".column-2",
+			distance: viewportHeight * 3.3
+		}, {
+			el: ".column-3",
+			distance: viewportHeight * 1.25
+		}, {
+			el: ".column-4",
+			distance: viewportHeight * 3
+		}];
+
+		columns.forEach((item) => {
+
+			gsap.fromTo(
+				item.el, {
+					y: 0
+				}, {
+					y: item.distance,
+					ease: "none",
+					scrollTrigger: {
+						trigger: gallery,
+						start: "top bottom",
+						end: "bottom top",
+						scrub: true
+					}
+				}
+			);
+
+		});
+	}
+</script>
+
+<!-- Loader -->
+<script is:inline>
+	// Page Loader: Logo Animation → Stairs Transition
+	(function() {
+		const loader = document.getElementById("page-loader");
+		const loaderLogo = document.getElementById("loaderLogo");
+		const stairsWrap = document.getElementById("stairsWrap");
+
+		// If loader elements don't exist, run reveal-text animations directly
+		if (!loader || !loaderLogo || !stairsWrap) {
+			if (typeof SplitText !== 'undefined') {
+				const revealEls = gsap.utils.toArray(".reveal-text");
+				if (revealEls.length > 0) {
+					revealEls.forEach(function(el) {
+						var split = new SplitText(el, { type: "chars, words" });
+						var isFirstSection = el.closest("section") === document.querySelector("section");
+
+						if (isFirstSection) {
+							// First section: animate immediately on load
+							gsap.from(split.chars, {
+								opacity: 0,
+								y: 80,
+								rotateY: -40,
+								scale: 0.8,
+								duration: 0.6,
+								stagger: 0.03,
+								ease: "back.out(1.7)",
+								delay: 0.2
+							});
+						} else {
+							// Other sections: animate on scroll
+							gsap.set(split.chars, { opacity: 0, y: 80, rotateY: -40, scale: 0.8 });
+
+							ScrollTrigger.create({
+								trigger: el,
+								start: "top 85%",
+								once: true,
+								onEnter: function() {
+									gsap.to(split.chars, {
+										opacity: 1,
+										y: 0,
+										rotateY: 0,
+										scale: 1,
+										duration: 0.6,
+										stagger: 0.03,
+										ease: "back.out(1.7)",
+									});
+								}
+							});
+						}
+					});
+				}
+			}
+			return;
+		}
+
+		// Set initial states for logo SVG elements
+		gsap.set("#lHex", { opacity: 0, scale: 0.6, svgOrigin: "17.57 20" });
+		gsap.set("#lChevron", { opacity: 0, scaleX: 0, svgOrigin: "17.57 17" });
+		gsap.set(".l-face", { opacity: 0, y: 6 });
+		gsap.set("#lEye1", { opacity: 0, scale: 0, svgOrigin: "9.69 18.68" });
+		gsap.set("#lEye2", { opacity: 0, scale: 0, svgOrigin: "25.46 18.68" });
+		gsap.set("#lSep", { opacity: 0, scaleY: 0, svgOrigin: "17.57 30.5" });
+		gsap.set(".l-text", { opacity: 0, y: 5 });
+
+		// Make elements visible (GSAP controls their appearance)
+		gsap.set(".l-hex, .l-chevron, .l-face, .l-eye, .l-sep, .l-text", { visibility: "visible" });
+
+		const tl = gsap.timeline();
+
+		// --- PHASE 1: Logo Animation ---
+		tl.to("#lHex", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(2.5)" }, 0);
+		tl.to("#lChevron", { opacity: 1, scaleX: 1, duration: 0.4, ease: "power3.out" }, 0.3);
+		tl.to("#lFace1", { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 0.45);
+		tl.to("#lFace2", { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 0.49);
+		tl.to("#lFace3", { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 0.53);
+		tl.to("#lFace4", { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 0.57);
+		tl.to("#lEye1", { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(3)" }, 0.65);
+		tl.to("#lEye2", { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(3)" }, 0.7);
+		tl.to("#lSep", { opacity: 1, scaleY: 1, duration: 0.35, ease: "power3.out" }, 0.78);
+
+		for (var i = 0; i < 8; i++) {
+			tl.to("#lT" + i, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 0.82 + i * 0.05);
+		}
+
+		// --- PHASE 2: Stairs Transition (after logo completes) ---
+		tl.to(loaderLogo, { opacity: 0, scale: 0.9, duration: 0.3, ease: "power2.in" }, "+=0.4");
+
+		// Show stairs, set them full height first
+		tl.set(stairsWrap, { opacity: 1 });
+		tl.set(".stair", { scaleY: 1, transformOrigin: "top" });
+
+		// Change loader bg so page is visible behind stairs
+		tl.set(loader, { background: "transparent" });
+
+		// Stairs slide out (reveal page from top to bottom)
+		tl.to(".stair", {
+			scaleY: 0,
+			transformOrigin: "top",
+			duration: 0.6,
+			stagger: { amount: -0.2, from: "start" },
+			ease: "power4.inOut"
+		}, "+=0.1");
+
+		// --- PHASE 3: Hide loader completely ---
+		tl.set(loader, { display: "none" });
+
+		// --- PHASE 4: Reveal text animation after loader ---
+		if (typeof SplitText !== 'undefined') {
+			const revealEls = gsap.utils.toArray(".reveal-text");
+			if (revealEls.length > 0) {
+				revealEls.forEach(el => {
+					const split = new SplitText(el, { type: "chars, words" });
+					gsap.set(split.chars, { opacity: 0, y: 80, rotateY: -40, scale: 0.8 });
+
+					tl.to(split.chars, {
+						opacity: 1,
+						y: 0,
+						rotateY: 0,
+						scale: 1,
+						duration: 0.6,
+						stagger: 0.03,
+						ease: "back.out(1.7)",
+					}, "-=0.2");
+				});
+			}
+		}
+	})();
+</script>
+
+<!-- Line Reveal Animation - common class: .line-reveal -->
+<script is:inline>
+	(function() {
+		if (typeof SplitText === 'undefined' || typeof gsap === 'undefined') return;
+
+		document.querySelectorAll(".line-reveal").forEach(function(el, index) {
+			var split = SplitText.create(el, {
+				type: "lines",
+				linesClass: "split-line",
+			});
+
+			// Wrap each line in overflow hidden for clip reveal
+			split.lines.forEach(function(line) {
+				var wrapper = document.createElement("div");
+				wrapper.style.overflow = "hidden";
+				line.parentNode.insertBefore(wrapper, line);
+				wrapper.appendChild(line);
+			});
+
+			// Check if element is in the first section (above fold)
+			var isFirstSection = el.closest("section") === document.querySelector("section");
+
+			if (isFirstSection) {
+				// First section: reveal immediately on page load
+				gsap.from(split.lines, {
+					y: "100%",
+					opacity: 0,
+					stagger: 0.2,
+					duration: 1,
+					ease: "power3.out",
+				});
+			} else {
+				// Other sections: reveal on scroll
+				gsap.set(split.lines, { y: "100%", opacity: 0 });
+
+				ScrollTrigger.create({
+					trigger: el,
+					start: "top 85%",
+					once: true,
+					onEnter: function() {
+						gsap.to(split.lines, {
+							y: "0%",
+							opacity: 1,
+							stagger: 0.2,
+							duration: 1,
+							ease: "power3.out",
+						});
+					}
+				});
+			}
+		});
+	})();
+</script>

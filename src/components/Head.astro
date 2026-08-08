@@ -1,0 +1,21 @@
+---
+/**
+ * @deprecated Use MainLayout.astro instead.
+ * This component is kept for backward compatibility.
+ */
+interface Props {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  swiper?: boolean;
+}
+
+const {
+  title = "Midnight",
+  description = "",
+  keywords = "",
+  swiper = false,
+} = Astro.props;
+---
+
+<!-- This component is deprecated. Use MainLayout.astro instead. -->

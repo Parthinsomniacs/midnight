@@ -1,0 +1,412 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import FootScripts from '../components/FootScripts.astro';
+
+const imagesurl = "/media/images/";
+---
+
+<MainLayout title="Midnight Digital Pvt Ltd" swiper={true} page="home" pagetype="onepage">
+  <Header page="home" />
+
+  <section class="section-banner pb-0">
+    <div class="container custom-container-1840">
+      <div class="theme-h-line theme-outerline-left">
+        <div class="theme-diagonal-line-right"></div>
+      </div>
+      <div class="theme-padding-xs">
+        <div class="banner-title">
+          <div class="section-title">
+            <span class="small-title scramble-text" data-text='["We Expert in Custom Development","We are expert in Product Development","We convert your imagination into visualisation"]'>We Expert in Custom Development</span>
+            <h1 class="scramble-text" data-text='["Software Development","Product Development","Creative Engineering"]'>Software Development</h1>
+          </div>
+        </div>
+        <div class="theme-h-line theme-outerline-left theme-outerline-right"></div>
+      </div>
+      <div class="banner-content">
+        <div class="location-wrraper is-relative">
+          <div class="location">
+            <span>Bhavnagar</span>
+          </div>
+          <div class="theme-h-line theme-outerline-left"></div>
+          <div class="theme-icon">
+            <video autoplay muted loop playsinline width="100%" height="100%">
+              <source src={`${imagesurl}video/theme-video.mp4`} type="video/mp4" />
+            </video>
+          </div>
+        </div>
+        <div class="experience-block">
+          <div class="experience-title">
+            <span>Experience</span>
+          </div>
+          <div class="theme-h-line"></div>
+          <span class="years">
+            <span class="text-roll">10+</span>
+          </span>
+        </div>
+        <div class="banner-desc">
+          <p class="is-uppercase scramble-text" data-text='["We develop software as per custom requirements","We convert your ideas into reality with MVP","We are experts in creative design and concept development"]'>
+            We develop software as per custom requirements
+          </p>
+          <a href="#" class="btn theme-btn btn-learn-more full-width">
+            Learn More
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M17 7l-10 10"></path>
+              <path d="M8 7l9 0l0 9"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="theme-h-line theme-outerline-left"></div>
+  </section>
+
+  <section class="section-image pb-0">
+    <div class="theme-h-line theme-outerline-left"></div>
+    <div class="container custom-container-1840">
+      <div class="image-container">
+        <picture>
+          <img src={`${imagesurl}banner/banner-xl.webp`} alt="Banner" width="1920" height="1080" />
+        </picture>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-industries-we-serve section-margin section-xs pb-0">
+    <div class="theme-h-line theme-outerline-left"></div>
+    <div class="container custom-container-1840">
+      <div class="theme-padding-xs section-xs pl-0">
+        <div class="section-head">
+          <div class="section-title mb-0">
+            <h3 class="fw-500 is-uppercase font-orbitron pl-4">Industries We Serve</h3>
+            <span class="small-title is-uppercase mb-0 pl-4">What we best at</span>
+            <div class="theme-h-line"></div>
+          </div>
+          <div class="section-title pl-4">
+            <h2>We provide smart and best digital services</h2>
+          </div>
+        </div>
+      </div>
+      <div class="theme-h-line theme-outerline-left theme-outerline-right"></div>
+      <div class="serve-wrapper">
+        <ul class="serve-ul">
+          {["AI Development", "Software Development", "Bringing Ideas Alive", "AI Workflow Automation", "Design & Experience", "Brand Development"].map((item, i) => (
+            <li class="serve-li">
+              <span class="serve-name d-block">
+                <span class="serve-num d-block">{`{ ${i + 1} }`}</span>
+                <div class="tab-details section1">
+                  <div class="tab-list-block">
+                    <ul class="tab-list">
+                      <li class={`tab ${i === 0 ? 'is-active' : ''}`}><a>{item}</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </span>
+            </li>
+          ))}
+        </ul>
+        <div class="serve-content">
+          <div class="tab-details section1">
+            <div class="tab-content">
+              {[
+                { id: "tab1", title: "AI Development", desc: "Ad justo sapiente voluptate voluptatem hunc ipsum proin fermentum, elementum, nam repudiandae ultrices in leo quod libero omnis." },
+                { id: "tab2", title: "Software Development", desc: "Te minim deserunt venenatis voluptatum elit neque rerum similique, scelerisque, dis scelerisque pariatur do per nemo aenean magna." },
+                { id: "tab3", title: "Bringing Ideas Alive", desc: "Quod adipiscing eget voluptatibus at suspendisse suscipit, ut labore et dolore aliqua mi nunc aliquam incidunt ubi eiusmod dolore." },
+                { id: "tab4", title: "AI Workflow Automation", desc: "Fuga numquam vulputate tota voluptatem ultrices. in eiusdem nam iaculis te vero quo quibus parturient dis blandit scelerisque." },
+                { id: "tab5", title: "Design & Experience", desc: "Te nisi sit eiusmod pellentesque ipsum tota aenean eiusmod, exercitationem officiis no porttitor egestas nihil tota iaculis." },
+                { id: "tab6", title: "Brand Development", desc: "Porro non id nemo molestie sunt e aenean neque proident. Sit amet consectetur voluptatum ubi laborum eget mihi e eiusmod cillum." },
+              ].map((tab, i) => (
+                <div class="content-tab" id={tab.id} style={i === 0 ? "display:block" : "display:none"}>
+                  <div class="is-flex is-flex-direction-column is-justify-content-space-between h-100">
+                    <h4 class="font-orbitron fw-500">{tab.title}</h4>
+                    <p>{tab.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div class="compny-log-box">
+            <div class="compny-log">
+              <div class="bg-area">
+                <picture>
+                  <img src={`${imagesurl}theme-icon-transparent.svg`} alt="Midnight Digital" width="145" height="70" />
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="theme-h-line theme-outerline-left"></div>
+  </section>
+
+  <section class="section-process section-xs">
+    <div class="cards">
+      <div class="card">
+        <div class="card-wrapper">
+          <div class="card-marquee">
+            <div class="marquee">
+              <h3>Discovery</h3>
+              <h3>Design</h3>
+              <h3>Development</h3>
+              <h3>Testing</h3>
+              <h3>Launch</h3>
+            </div>
+          </div>
+          <div class="card-img">
+            <video autoplay muted loop playsinline width="100%" height="100%">
+              <source src={`${imagesurl}process/process-video.mp4`} type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+      {[
+        { title: "Discovery", desc: "We begin by understanding your business goals, audience, and competitive landscape. Through workshops and research", img: "1.webp" },
+        { title: "Design", desc: "We translate insights into user-centered designs, creating wireframes, prototypes, and visual elements that enhance usability.", img: "2.webp" },
+        { title: "Development", desc: "Our development team builds robust applications, ensuring functionality and performance while adhering to best practices.", img: "3.webp" },
+        { title: "Testing", desc: "We conduct thorough testing to identify bugs and gather user feedback to refine the product before launch.", img: "4.webp" },
+        { title: "Launch", desc: "We assist with deploying your product, ensuring a smooth transition into the market and monitoring initial user interaction.", img: "5.webp" },
+      ].map(card => (
+        <div class="card">
+          <div class="card-wrapper">
+            <div class="card-content">
+              <div class="card-title"><h4>{card.title}</h4></div>
+              <div class="card-description"><p>{card.desc}</p></div>
+            </div>
+            <div class="card-img white-overlay is-relative">
+              <img src={`${imagesurl}process/${card.img}`} alt={card.title} />
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="section-project section-margin section-xs pb-0">
+    <div class="theme-h-line theme-outerline-left"></div>
+    <div class="container custom-container-1840">
+      <div class="project-main section-xs">
+        <div class="section-title mb-0">
+          <span class="small-title is-uppercase mb-0 pl-4">Our Featured Projects</span>
+          <div class="theme-h-line"></div>
+        </div>
+        <div class="section-title pl-4">
+          <h2 class="text-roll">Projects</h2>
+        </div>
+      </div>
+      <div class="theme-h-line theme-outerline-left theme-outerline-right"></div>
+      <div class="section-xs theme-padding-xs">
+        <div class="is-relative">
+          <div class="swiper-arrow-absolute">
+            <div class="swiper-button-next">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9.707 5.293l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 1 1 -1.414 -1.414l5.293 -5.293l-5.293 -5.293a1 1 0 0 1 1.414 -1.414" /></svg>
+            </div>
+            <div class="swiper-button-prev">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M15 6l-6 6l6 6" /></svg>
+            </div>
+          </div>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              {[
+                { img: "ift-enpower-hackathon.webp", title: "IFT Enpower Hackathon" },
+                { img: "mishi-marine-solution.webp", title: "Mishi Marine Solution" },
+                { img: "ssx-india.webp", title: "SSX India" },
+                { img: "vigo-nets.webp", title: "Vigo Nets" },
+                { img: "mishi-marine-solution.webp", title: "Mishi Marine Solution" },
+              ].map(project => (
+                <div class="swiper-slide">
+                  <div class="prohect-img">
+                    <picture>
+                      <img src={`${imagesurl}projects/${project.img}`} alt={project.title} width="400" height="500" />
+                    </picture>
+                    <div class="project-title">
+                      <p>{project.title}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-products section-margin section-xs pb-0">
+    <div class="theme-h-line theme-outerline-left"></div>
+    <div class="container custom-container-1840">
+      <div class="product-main section-xs">
+        <div class="theme-log">
+          <picture>
+            <img src={`${imagesurl}theme-icon-transparent.svg`} alt="Midnight Digital" width="145" height="70" />
+          </picture>
+          <div class="theme-h-line"></div>
+        </div>
+        <div class="section-title pl-4">
+          <h2 class="text-roll">OUR PRODUCTS</h2>
+        </div>
+      </div>
+      <div class="theme-h-line theme-outerline-left"></div>
+      <div class="section-xs pb-0">
+        <div class="section-xs">
+          <div class="parallax-gallery">
+            {[1, 2, 3, 4].map(col => (
+              <div class={`parallax-column column-${col}`}>
+                {[1, 2, 3, 4, 5].map(img => (
+                  <div class="parallax-item">
+                    <img src={`${imagesurl}product/${img}.webp`} alt="" />
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-testimonial section-xs pb">
+    <div class="theme-h-line theme-outerline-left"></div>
+    <div class="container custom-container-1840">
+      <div class="testimonial-title section-xs pb-0">
+        <div class="section-title mb-0">
+          <h3 class="fw-500 is-uppercase font-orbitron pl-4">Testimonial</h3>
+        </div>
+        <div class="section-title pl-4">
+          <h2 class="text-roll">What Our Clients Say</h2>
+        </div>
+      </div>
+      <div class="theme-h-line theme-outerline-left theme-outerline-right"></div>
+      <div class="section-xs theme-padding-xs">
+        <div class="is-relative">
+          <div class="swiper-arrow-absolute">
+            <div class="swiper-button-next">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9.707 5.293l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 1 1 -1.414 -1.414l5.293 -5.293l-5.293 -5.293a1 1 0 0 1 1.414 -1.414" /></svg>
+            </div>
+            <div class="swiper-button-prev">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M15 6l-6 6l6 6" /></svg>
+            </div>
+          </div>
+          <div class="swiper testimonial-slider">
+            <div class="swiper-wrapper">
+              {[
+                { logo: "1.webp", desc: "Nam vitae eros ac elit varius posuere. Aenean mollis dolor at purus dignissim, sed vehicula massa cursus. Suspendisse potenti.", name: "John Doe", company: "Coastal Living" },
+                { logo: "2.webp", desc: "Integer euismod magna non sapien vestibulum, ut convallis metus venenatis. Curabitur sit amet ipsum ac dui varius consequat.", name: "Oliver Turner", company: "Luxe Estates" },
+                { logo: "3.webp", desc: "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras tincidunt sapien at nisl hendrerit.", name: "Aisha Khan", company: "Dream Dwellings" },
+                { logo: "4.webp", desc: "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras tincidunt sapien at nisl hendrerit.", name: "Aisha Khan", company: "Dream Dwellings" },
+                { logo: "5.webp", desc: "Sed sollicitudin ligula sit amet convallis gravida. Aliquam erat volutpat, tincidunt in leo et, tincidunt scelerisque ligula.", name: "Jasmin Patel", company: "Green Homes" },
+                { logo: "6.webp", desc: "Nam vitae eros ac elit varius posuere. Aenean mollis dolor at purus dignissim, sed vehicula massa cursus. Suspendisse potenti.", name: "Sakshi Mehra", company: "Raymond Realty" },
+              ].map(t => (
+                <div class="swiper-slide">
+                  <div class="testimonial-box">
+                    <div class="client-logo mb-5">
+                      <picture>
+                        <img src={`${imagesurl}testimonials/${t.logo}`} alt="Testimonials" width="400" height="500" />
+                      </picture>
+                    </div>
+                    <div class="testimonials-desc mb-5">
+                      <p>{t.desc}</p>
+                    </div>
+                    <div class="testimonials-profile is-flex is-align-items-center is-gap-4">
+                      <div class="profile-img">
+                        <picture>
+                          <img src={`${imagesurl}testimonials/profile/1.webp`} alt={t.name} width="400" height="500" />
+                        </picture>
+                      </div>
+                      <div class="profile-title">
+                        <p class="mb-0 fw-600">{t.name}</p>
+                        <p class="mb-0 theme-color fw-500">{t.company}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-footer section-xs">
+    <div class="theme-h-line theme-outerline-left"></div>
+    <div class="container custom-container-1840">
+      <div class="contact-us-title section-xs pb-0">
+        <div class="section-title mb-0">
+          <h3 class="fw-500 is-uppercase font-orbitron pl-4">Let's Talk</h3>
+          <div class="theme-h-line"></div>
+        </div>
+        <div class="section-title pl-4">
+          <h2 class="text-roll">Contact Us</h2>
+        </div>
+      </div>
+      <div class="theme-h-line theme-outerline-left theme-outerline-right"></div>
+      <div class="footer-box">
+        <div class="media-wrapper">
+          <div class="footer-logo pl-4">
+            <picture>
+              <img src={`${imagesurl}logo.svg`} alt="Midnight Digital Logo" width="145" height="70" />
+            </picture>
+          </div>
+          <div class="social-links">
+            <ul>
+              {["Facebook", "Instagram", "LinkedIn", "Twitter"].map(social => (
+                <li>
+                  <a href="#">
+                    {social}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9.707 5.293l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 1 1 -1.414 -1.414l5.293 -5.293l-5.293 -5.293a1 1 0 0 1 1.414 -1.414" /></svg>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="copyright-text pl-4">
+            <p>Copyright &copy; <b>Midnight</b> {new Date().getFullYear()}</p>
+          </div>
+        </div>
+      </div>
+      <div class="theme-h-line theme-outerline-left theme-outerline-right"></div>
+    </div>
+  </section>
+
+  <FootScripts page="home" pagetype="onepage" />
+
+  <!-- Swiper Init -->
+  <script src="/media/js/swiper-bundle.min.js" is:inline></script>
+  <script is:inline>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 4,
+      spaceBetween: 30,
+      loop: true,
+      speed: 1000,
+      navigation: { nextEl: ".section-project .swiper-button-next", prevEl: ".section-project .swiper-button-prev" },
+      breakpoints: { 0: { slidesPerView: 1 }, 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 }, 1216: { slidesPerView: 4 } }
+    });
+
+    var testimonialSwiper = new Swiper(".testimonial-slider", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      loop: true,
+      speed: 1000,
+      navigation: { nextEl: ".section-testimonial .swiper-button-next", prevEl: ".section-testimonial .swiper-button-prev" },
+      breakpoints: { 0: { slidesPerView: 1 }, 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
+    });
+  </script>
+
+  <!-- Tab Functionality -->
+  <script is:inline>
+    function openTab(evt, tabName, sectionClass) {
+      var section = document.querySelector('.' + sectionClass);
+      if (!section) return;
+      var contents = section.querySelectorAll('.content-tab');
+      contents.forEach(function(c) { c.style.display = 'none'; });
+      var tabs = section.querySelectorAll('.tab');
+      tabs.forEach(function(t) { t.classList.remove('is-active'); });
+      var target = document.getElementById(tabName);
+      if (target) target.style.display = 'block';
+      if (evt && evt.currentTarget) evt.currentTarget.classList.add('is-active');
+    }
+  </script>
+</MainLayout>
