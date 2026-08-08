@@ -697,9 +697,6 @@
     padding-left: 20px;
     padding-right: 20px;
   }
-  .rr-v-lines .rr-line:first-child {
-    display: none;
-  }
   .insomenu-bars {
     top: 10px;
     right: 15px;
@@ -904,6 +901,33 @@
 }
 
 @media screen and (max-width: 420px) {
+  .rr-v-lines .rr-line:first-child {
+    display: none;
+  }
+  .section-title h1,
+  .section-title h2 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .btn.btn-learn-more {
+    padding: 8px 10px;
+    width: fit-content;
+  }
+  .theme-padding-xs {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .banner-desc {
+    padding: 10px;
+  }
+  .years {
+    padding: 0 10px;
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .experience-title {
+    padding: 10px 10px 0;
+  }
   .modal-title {
     font-size: 16px;
   }
@@ -919,9 +943,38 @@
   .sticky-btn-enquire.sticky-brochure {
     width: 60%;
   }
+  .header-wrapper {
+    grid-template-columns: 1fr 1fr 150px;
+  }
+  .theme-logo img {
+    max-height: 25px;
+  }
 }
 
 @media screen and (max-width: 380px) {
+  .header-get-in-touch {
+    display: none;
+  }
+  .banner-title {
+    padding: 10px 0 10px 0;
+  }
+  .menu-item,
+  .header-get-in-touch {
+    margin-right: 10px;
+  }
+  .header-wrapper {
+    grid-template-columns: 1fr 1fr 140px;
+  }
+  .section-title h1,
+  .section-title h2 {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .small-title {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
   .tab-list .tab a {
     width: 100%;
     padding: 12px 24px;
