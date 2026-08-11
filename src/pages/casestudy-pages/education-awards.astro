@@ -1,13 +1,13 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
-import Header from "../components/Header.astro";
-import FootScripts from "../components/FootScripts.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
+import Header from "../../components/Header.astro";
+import FootScripts from "../../components/FootScripts.astro";
 
 const imagesurl = "/media/images/";
 ---
 
 <MainLayout
-  title="IFT Enpower Hackathon | Midnight Digital Pvt Ltd"
+  title="Education Icon Awards | Midnight Digital Pvt Ltd"
   swiper={true}
   page="home"
   pagetype="onepage"
@@ -20,8 +20,8 @@ const imagesurl = "/media/images/";
         <div class="casstudy-detail-logo">
           <picture>
             <img
-              class="mb-0"
-              src={`${imagesurl}case-study/all-case-study/ift-india/enp-logo.webp`}
+              class="mb-3"
+              src={`${imagesurl}case-study/all-case-study/education-icon-awards/logo.webp`}
               alt="IFT Enpower Hackathon"
               width="145"
               height="70"
@@ -29,14 +29,37 @@ const imagesurl = "/media/images/";
           </picture>
         </div>
         <div
-          class="section-title theme-padding-xs mb-0 has-text-centered line-reveal"
+          class="section-title theme-padding-xs mb-0 has-text-centered line-reveal casestudy-detail-title"
         >
-          <h2 class="text-roll">IFT Enpower</h2>
+          <h2 class="text-roll">Education Icon Awards</h2>
         </div>
         <div class="case-study-page-detail-social-icon">
+          <a
+            href="https://www.facebook.com/educationiconaward/"
+            target="_blank"
+            class="social-block"
+          >
+            <div class="social-icon-box">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                  d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"
+                ></path></svg
+              >
+            </div>
+          </a>
           <!-- Instagram -->
           <a
-            href="https://www.instagram.com/enpower.thinkcreatelead/"
+            href="https://www.instagram.com/educationiconawards/"
             target="_blank"
             class="social-block"
           >
@@ -58,72 +81,6 @@ const imagesurl = "/media/images/";
                 ></path><path d="M16.5 7.5v.01"></path></svg
               >
             </div>
-            <div class="social-info">
-              <h5 class="social-name">Instagram</h5>
-              <span class="social-username">@runrkids</span>
-            </div>
-          </a>
-
-          <!-- Linkdin -->
-          <a
-            href="https://in.linkedin.com/company/enlearning"
-            target="_blank"
-            class="social-block"
-          >
-            <div class="social-icon-box">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"
-                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-                  d="M8 11v5"></path><path d="M8 8v.01"></path><path
-                  d="M12 16v-5"></path><path d="M16 16v-3a2 2 0 1 0 -4 0"
-                ></path><path
-                  d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4l0 -10"
-                ></path></svg
-              >
-            </div>
-            <div class="social-info">
-              <h5 class="social-name">Instagram</h5>
-              <span class="social-username">@runrkids</span>
-            </div>
-          </a>
-
-          <!--  -->
-
-          <a
-            href="https://www.facebook.com/Enpowerbschool/"
-            target="_blank"
-            class="social-block"
-          >
-            <div class="social-icon-box">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"
-                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-                  d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"
-                ></path></svg
-              >
-            </div>
-            <div class="social-info">
-              <h5 class="social-name">Instagram</h5>
-              <span class="social-username">@runrkids</span>
-            </div>
           </a>
         </div>
       </div>
@@ -138,12 +95,11 @@ const imagesurl = "/media/images/";
           >
             <div class="theme-padding-xs section-xs">
               <h3 class="mb-5 fw-500 line-reveal">Project Overview</h3>
-              <p class="has-text-justified line-reveal">
-                India's future tycoons is basically designed for hackathon
-                competitions taking place in India. IFT is a SaaS based platform
-                which helps organisations to conduct any kind of online
-                competitions, collect submissions for it and announce results
-                for the same, digitally powered by “Midnight E-hackathon”.
+
+              <p>
+                Education icon awards also known as EIA is a platform envisioned
+                and created to recognize and honour the Indian Education System
+                along with its contributors in different areas of education.
               </p>
             </div>
             <div class="is-relative">
@@ -154,8 +110,7 @@ const imagesurl = "/media/images/";
                 >
                   <h6>Platform</h6>
                   <ul class="list-point">
-                    <li>Laravel</li>
-                    <li>PHP</li>
+                    <li>Android, iOS,Web CMS</li>
                   </ul>
                 </div>
                 <div
@@ -168,7 +123,9 @@ const imagesurl = "/media/images/";
                   class="product-detail-block section-xs theme-padding-xs line-reveal"
                 >
                   <h6>Programming Language</h6>
-                  <p>PHP</p>
+                  <ul class="list-point">
+                    <li>Swift, Kotlin, C#</li>
+                  </ul>
                 </div>
               </div>
               <div class="theme-h-line"></div>
@@ -177,30 +134,32 @@ const imagesurl = "/media/images/";
                   class="product-detail-block section-xs theme-padding-xs line-reveal"
                 >
                   <h6>Database</h6>
-                  <p>MySQL</p>
+                  <p>SQL Server</p>
                 </div>
 
                 <div
                   class="product-detail-block section-xs theme-padding-xs line-reveal"
                 >
                   <h6>Development Tool</h6>
-                  <p>Visual Studio</p>
+                  <ul class="list-point">
+                    <li>Xcode,Android Studio,Visual Studio</li>
+                  </ul>
                 </div>
                 <div
                   class="product-detail-block section-xs theme-padding-xs line-reveal"
                 >
                   <h6>Integration</h6>
-                  <p>Send in Blue, Google Analytics</p>
+                  <p>Payment Gateway (Authorized.Net)</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div class="detai-page-wrapper rr-v-lines-none gray-bg border-right">
-          <div class="case-study-image reveal-media p-3">
+          <div class="case-study-image bharat-app reveal-media p-3">
             <picture>
               <img
-                src={`${imagesurl}case-study/all-case-study/ift-india/ift.webp`}
+                src={`${imagesurl}case-study/all-case-study/education-icon-awards/monitor.webp`}
                 alt="Case Study"
                 width="915"
                 height="815"
@@ -284,12 +243,9 @@ const imagesurl = "/media/images/";
           </div>
           <div class="client-desc line-reveal">
             <p>
-              According to the client, they are facing issues in managing things
-              manually for such kinds of competitions. With their basic problem
-              statement to make process automation and provide the system as
-              transparent as possible for the students to gain faith in the
-              system’s ranking system and impartial standards, we were
-              approached by them.
+              The client wanted a platform to digitise their initiative so more
+              education bodies can reach out to them and hence they can justify
+              and provide recognition to every possible contributor.
             </p>
           </div>
         </div>
@@ -298,31 +254,25 @@ const imagesurl = "/media/images/";
         <div class="case-detail-right">
           <div class="case-detail-block section-xs theme-padding-xs">
             <h3 class="case-detail-heading line-reveal">Core Requirements</h3>
-            <p>
-              Develop such a system where students can easily register and
-              participate in these competitions. Registration process up to mark
-              with authentications and validations making it possible to
-              register as a team or individually.
-            </p>
-            <p>
-              Clients must be able to create a jury panel, analyse submissions
-              and shortlist students along with the ability to observe
-              analytics.
-            </p>
-            <p>
-              Students must be able to receive notifications and certificates
-              related to the competitions, automatically.
-            </p>
             <div class="mocup-img">
               <picture>
                 <img
-                  src={`${imagesurl}case-study/all-case-study/ift-india/mobile-mockup.webp`}
+                  src={`${imagesurl}case-study/all-case-study/education-icon-awards/edition.webp`}
                   alt="Core Requirements"
-                  width="915"
-                  height="815"
+                  width="350"
+                  height="410"
                 />
               </picture>
             </div>
+            <ul class="list-point">
+              <li>
+                Ability to register members including speakers, sponsors and
+                make payment towards the membership from the site itself.
+              </li>
+              <li>Ability to book tickets for award ceremonies.</li>
+              <li>Ability to subscribe for newsletters from EIA.</li>
+              <li>Ability to raise questions from the site itself.</li>
+            </ul>
           </div>
           <div class="theme-h-line"></div>
 
@@ -334,7 +284,7 @@ const imagesurl = "/media/images/";
               <div class="solution-img">
                 <picture>
                   <img
-                    src={`${imagesurl}case-study/all-case-study/ift-india/1-laptop.webp`}
+                    src={`${imagesurl}case-study/all-case-study/education-icon-awards/1-laptop.webp`}
                     alt="Core Requirements"
                     width="820"
                     height="820"
@@ -347,7 +297,7 @@ const imagesurl = "/media/images/";
               <div class="solution-img">
                 <picture>
                   <img
-                    src={`${imagesurl}case-study/all-case-study/ift-india/2-laptop.webp`}
+                    src={`${imagesurl}case-study/all-case-study/education-icon-awards/2-laptop.webp`}
                     alt="Core Requirements"
                     width="820"
                     height="820"
@@ -360,7 +310,7 @@ const imagesurl = "/media/images/";
               <div class="solution-img">
                 <picture>
                   <img
-                    src={`${imagesurl}case-study/all-case-study/ift-india/3-laptop.webp`}
+                    src={`${imagesurl}case-study/all-case-study/education-icon-awards/3-laptop.webp`}
                     alt="Core Requirements"
                     width="820"
                     height="820"

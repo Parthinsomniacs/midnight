@@ -1,12 +1,17 @@
 ---
-import MainLayout from '../layouts/MainLayout.astro';
-import Header from '../components/Header.astro';
-import FootScripts from '../components/FootScripts.astro';
+import MainLayout from "../layouts/MainLayout.astro";
+import Header from "../components/Header.astro";
+import FootScripts from "../components/FootScripts.astro";
 
 const imagesurl = "/media/images/";
 ---
 
-<MainLayout title="About Us | Midnight Digital Pvt Ltd" swiper={true} page="home" pagetype="onepage">
+<MainLayout
+  title="About Us | Midnight Digital Pvt Ltd"
+  swiper={true}
+  page="home"
+  pagetype="onepage"
+>
   <Header page="home" />
 
   <section class="section-about-banner p-0">
@@ -14,18 +19,27 @@ const imagesurl = "/media/images/";
       <div class="about-video-wrapper">
         <div class="about-video is-relative black-overlay">
           <video autoplay muted loop playsinline width="100%" height="100%">
-            <source src={`${imagesurl}about/banner/theme-video.mp4`} type="video/mp4" />
+            <source
+              src={`${imagesurl}about/banner/theme-video.mp4`}
+              type="video/mp4"
+            />
           </video>
         </div>
         <div class="about-title-wrapper">
           <div class="section-title mb-0">
-            <h3 class="fw-500 is-uppercase font-orbitron pl-4 reveal-text">Who We Are</h3>
+            <h3 class="fw-500 is-uppercase font-orbitron pl-4 reveal-text">
+              Who We Are
+            </h3>
           </div>
           <div class="section-title pl-4">
-            <h2 class="reveal-text">Sleepless <span class="yellow-text">Rangers</span></h2>
+            <h2 class="reveal-text">
+              Sleepless <span class="yellow-text">Rangers</span>
+            </h2>
           </div>
           <div class="about-title-tagline dark">
-            <h4 class="fw-700 font-orbitron is-uppercase reveal-text">We are energetic, dynamic and experience</h4>
+            <h4 class="fw-700 font-orbitron is-uppercase reveal-text">
+              We are energetic, dynamic and experience
+            </h4>
           </div>
         </div>
         <div class="about-banner-placeholder" aria-hidden="true"></div>
@@ -33,11 +47,17 @@ const imagesurl = "/media/images/";
 
       <div class="about-banner-img">
         <picture>
-          <img src={`${imagesurl}about/banner/about-banner.webp`} alt="Banner" width="1920" height="880" />
+          <img
+            src={`${imagesurl}about/banner/about-banner.webp`}
+            alt="Banner"
+            width="1920"
+            height="880"
+          />
         </picture>
       </div>
 
-      <div class="theme-h-line theme-outerline-left theme-outerline-right"></div>
+      <div class="theme-h-line theme-outerline-left theme-outerline-right">
+      </div>
     </div>
   </section>
 
@@ -48,23 +68,47 @@ const imagesurl = "/media/images/";
         <div class="sleepless-rangers-left">
           <div class="theme-log">
             <picture>
-              <img class="mb-0" src={`${imagesurl}theme-icon-transparent.svg`} alt="Midnight Digital" width="145" height="70" />
+              <img
+                class="mb-0"
+                src={`${imagesurl}theme-icon-transparent.svg`}
+                alt="Midnight Digital"
+                width="145"
+                height="70"
+              />
             </picture>
           </div>
         </div>
         <div class="sleepless-rangers-right">
           <div class="section-title theme-padding-xs mb-0">
-            <h2 class="reveal-text">We are energetic, dynamic and experienced</h2>
+            <h2 class="reveal-text">
+              We are energetic, dynamic and experienced
+            </h2>
           </div>
         </div>
       </div>
       <div class="theme-h-line theme-outerline-left"></div>
       <div class="about-desc-main gray-bg">
-        <div class="is-flex is-flex-direction-column is-justify-content-space-between theme-padding-xs section-xs">
+        <div
+          class="is-flex is-flex-direction-column is-justify-content-space-between theme-padding-xs section-xs"
+        >
           <div class="about-desc">
-            <p>Midnight Digital Pvt. Ltd. is a firm that pulls all-nighters to make your dreams into the leading-edge of the era. This gives you the opportunity to not only make your dreams come true but also one at the forefront of the digital era.</p>
-            <p>We work one finger to the bone to be the bridge between you and your success. We have an elegant, nimble-witted, and agile team working from dusk till dawn under our enlightenment.</p>
-            <p>Founded in 2020. Midnight name itself defines ourselves and our services. We never go to sleep until we deliver what we committed. We have delivered many projects in various industries like Real Estate, Education, Health Care and Many others.</p>
+            <p>
+              Midnight Digital Pvt. Ltd. is a firm that pulls all-nighters to
+              make your dreams into the leading-edge of the era. This gives you
+              the opportunity to not only make your dreams come true but also
+              one at the forefront of the digital era.
+            </p>
+            <p>
+              We work one finger to the bone to be the bridge between you and
+              your success. We have an elegant, nimble-witted, and agile team
+              working from dusk till dawn under our enlightenment.
+            </p>
+            <p>
+              Founded in 2020. Midnight name itself defines ourselves and our
+              services. We never go to sleep until we deliver what we committed.
+              We have delivered many projects in various industries like Real
+              Estate, Education, Health Care and Many others.
+            </p>
           </div>
           <div class="about-stats">
             <div class="stat-item">
@@ -79,7 +123,12 @@ const imagesurl = "/media/images/";
         </div>
         <div class="about-desc-img">
           <picture>
-            <img src={`${imagesurl}about/team.webp`} alt="Team" width="1920" height="880" />
+            <img
+              src={`${imagesurl}about/team.webp`}
+              alt="Team"
+              width="1920"
+              height="880"
+            />
           </picture>
         </div>
       </div>
@@ -94,12 +143,24 @@ const imagesurl = "/media/images/";
         <div class="vm-block vm-vision">
           <span class="vm-label">01</span>
           <h2 class="vm-title font-orbitron reveal-text">Our Vision</h2>
-          <p class="vm-desc">We are determined to expand our reach by offering prime services across a wide range of areas. We are also looking forward to working with the latest technologies. So, We emphasise highly reliable, scalable, innovative, and strong growth as the base therefore we provide varied advancements in the products and services.</p>
+          <p class="vm-desc">
+            We are determined to expand our reach by offering prime services
+            across a wide range of areas. We are also looking forward to working
+            with the latest technologies. So, We emphasise highly reliable,
+            scalable, innovative, and strong growth as the base therefore we
+            provide varied advancements in the products and services.
+          </p>
         </div>
         <div class="vm-block vm-mission pl-4">
           <span class="vm-label">02</span>
           <h2 class="vm-title font-orbitron reveal-text">Our Mission</h2>
-          <p class="vm-desc">We are determined to expand our reach by offering prime services across a wide range of areas. We are also looking forward to working with the latest technologies. So, We emphasise highly reliable, scalable, innovative, and strong growth as the base therefore we provide varied advancements in the products and services.</p>
+          <p class="vm-desc">
+            We are determined to expand our reach by offering prime services
+            across a wide range of areas. We are also looking forward to working
+            with the latest technologies. So, We emphasise highly reliable,
+            scalable, innovative, and strong growth as the base therefore we
+            provide varied advancements in the products and services.
+          </p>
         </div>
       </div>
     </div>
@@ -109,7 +170,12 @@ const imagesurl = "/media/images/";
   <section class="section-image pb-0 pt-0">
     <div class="image-container">
       <picture>
-        <img src={`${imagesurl}about/about-wrapper.webp`} alt="About" width="1920" height="1080" />
+        <img
+          src={`${imagesurl}about/about-wrapper.webp`}
+          alt="About"
+          width="1920"
+          height="1080"
+        />
       </picture>
     </div>
   </section>
@@ -117,44 +183,131 @@ const imagesurl = "/media/images/";
   <section class="section about-title-marquee">
     <div class="about-marquee-track">
       <div class="about-marquee-content">
-        {Array(11).fill(null).map(() => (
-          <h3>We are a team of Sleepless rangers.</h3>
-        ))}
+        {
+          Array(11)
+            .fill(null)
+            .map(() => <h3>We are a team of Sleepless rangers.</h3>)
+        }
       </div>
     </div>
   </section>
 
-  <section class="section-believe dark">
+  <section class="section-believe">
     <div class="container custom-container-1840">
       <div class="believe-header">
         <div class="section-title mb-0">
           <h2 class="font-orbitron fw-700 is-uppercase">We Believe In</h2>
-          <span class="believe-tagline"><span class="believe-dot"></span> end to end solution</span>
+          <span class="believe-tagline"
+            ><span class="believe-dot"></span> end to end solution</span
+          >
         </div>
       </div>
       <div class="believe-accordion">
-        {[
-          { num: "01", title: "Design.", desc: "We understand your ideas and requirements and then start working on its workflow and creative design. We make data-driven decisions about UX while innovating every step of the way." },
-          { num: "02", title: "Conception.", desc: "We transform abstract ideas into concrete plans. Our team maps every user journey, defines system architecture, and creates comprehensive blueprints before a single line of code is written." },
-          { num: "03", title: "Development.", desc: "Our development team builds robust, scalable applications using modern technologies and best practices. Every line of code is written with performance, security, and maintainability in mind." },
-          { num: "04", title: "Support.", desc: "Our commitment doesn't end at launch. We provide ongoing support, maintenance, and optimization to ensure your digital products continue to perform at their best." },
-          { num: "05", title: "Marketing.", desc: "We help brands grow through strategic digital marketing, SEO optimization, and data-driven campaigns that deliver measurable results and sustainable growth." },
-        ].map((item, i) => (
-          <div class={`believe-acc-item ${i === 0 ? 'is-active' : ''}`}>
-            <div class="believe-acc-header">
-              <span class="believe-acc-num">{item.num}</span>
-              <h4 class="believe-acc-title">{item.title}</h4>
-              <span class="believe-acc-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6l6-6" /></svg>
-              </span>
-            </div>
-            <div class="believe-acc-body">
-              <div class="believe-acc-content">
-                <p>{item.desc}</p>
+        {
+          [
+            {
+              num: "01",
+              title: "Design.",
+              expertise: "Expertise",
+              heading: "WE CONVERT YOUR IMAGINATION INTO CREATIVE",
+              desc: "We understand your ideas and requirements and then start working on its work flow and creative design. We make data-driven decisions about UX while innovating every step of the way. From mobile to tablet to full wall projections, our digital creations are designed to make an impact on any sized screen.",
+              points: [
+                "Prototyping",
+                "Wireframes",
+                "Customer journey design",
+                "UI Design",
+                "UX Design",
+              ],
+            },
+            {
+              num: "02",
+              title: "Conception.",
+              expertise: "Expertise",
+              heading: "WE CONVERT YOUR IMAGINATION INTO CREATIVE.",
+              desc: "We make data-driven decisions about UX while innovating every step of the way. From mobile to tablet to full wall projections, our digital creations are designed to make an impact on any sized screen.",
+              points: [
+                "art direction",
+                "user experience",
+                "user interface",
+                "web design",
+              ],
+            },
+            {
+              num: "03",
+              title: "Development.",
+              expertise: "Expertise",
+              heading: "DEVELOPMENT.",
+              desc: "Our engineers are artists - they can breathe life into designs and make websites move in ways you never thought possible.",
+              points: [
+                "WordPress/PHP",
+                "Sage",
+                "e-commerce",
+                "Shopify",
+                "maintenance",
+              ],
+            },
+            {
+              num: "04",
+              title: "Support.",
+              expertise: "Expertise",
+              heading: "SUPPORT.",
+              desc: "We're here to help you. Reach out to us anytime, for anything you need. Ongoing technical support is part of the deal, so you can focus on growing your business—worry-free.",
+              points: [
+                "art direction",
+                "user experience",
+                "user interface",
+                "web design",
+              ],
+            },
+            {
+              num: "05",
+              title: "Marketing.",
+              expertise: "Expertise",
+              heading: "CONCEPTION.",
+              desc: "Our engineers are artists - they can breathe life into designs and make websites move in ways you never thought possible.",
+              points: [
+                "digital strategy",
+                "brand strategy",
+                "prototyping",
+                "content creation",
+                "project management",
+              ],
+            },
+          ].map((item, i) => (
+            <div class={`believe-acc-item ${i === 0 ? "is-active" : ""}`}>
+              <div class="believe-acc-header">
+                <span class="believe-acc-num">{item.num}</span>
+                <h4 class="believe-acc-title">{item.title}</h4>
+                <span class="believe-acc-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M6 9l6 6l6-6" />
+                  </svg>
+                </span>
+              </div>
+              <div class="believe-acc-body">
+                <div class="believe-acc-content">
+                  <span class="believe-expertise">{item.expertise}</span>
+                  <p class="mb-5">{item.desc}</p>
+                  <ul class="list-point">
+                    {item.points.map((point) => (
+                      <li>{point}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))
+        }
       </div>
     </div>
   </section>
@@ -171,19 +324,45 @@ const imagesurl = "/media/images/";
           <h2 class="text-roll">Contact Us</h2>
         </div>
       </div>
-      <div class="theme-h-line theme-outerline-left theme-outerline-right"></div>
+      <div class="theme-h-line theme-outerline-left theme-outerline-right">
+      </div>
       <div class="footer-box">
         <div class="media-wrapper">
           <div class="footer-logo pl-4">
             <picture>
-              <img src={`${imagesurl}logo.svg`} alt="Midnight Digital Logo" width="145" height="70" />
+              <img
+                src={`${imagesurl}logo.svg`}
+                alt="Midnight Digital Logo"
+                width="145"
+                height="70"
+              />
             </picture>
           </div>
           <div class="social-links">
             <ul>
-              {["Facebook", "Instagram", "LinkedIn", "Twitter"].map(social => (
-                <li><a href="#">{social}<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9.707 5.293l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 1 1 -1.414 -1.414l5.293 -5.293l-5.293 -5.293a1 1 0 0 1 1.414 -1.414" /></svg></a></li>
-              ))}
+              {
+                ["Facebook", "Instagram", "LinkedIn", "Twitter"].map(
+                  (social) => (
+                    <li>
+                      <a href="#">
+                        {social}
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                        >
+                          <>
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M9.707 5.293l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 1 1 -1.414 -1.414l5.293 -5.293l-5.293 -5.293a1 1 0 0 1 1.414 -1.414" />
+                          </>
+                        </svg>
+                      </a>
+                    </li>
+                  ),
+                )
+              }
             </ul>
           </div>
           <div class="copyright-text pl-4">
@@ -191,7 +370,8 @@ const imagesurl = "/media/images/";
           </div>
         </div>
       </div>
-      <div class="theme-h-line theme-outerline-left theme-outerline-right"></div>
+      <div class="theme-h-line theme-outerline-left theme-outerline-right">
+      </div>
     </div>
   </section>
 
@@ -210,53 +390,84 @@ const imagesurl = "/media/images/";
       const startX = phRect.left - imgRect.left;
       const startY = phRect.top - imgRect.top;
 
-      gsap.fromTo(aboutBannerImg, { x: startX, y: startY, scale: startScale }, {
-        x: 0, y: 0, scale: 1, ease: "none",
-        scrollTrigger: { trigger: ".section-about-banner", start: "top top", end: "+=400", scrub: 0.3 }
-      });
+      gsap.fromTo(
+        aboutBannerImg,
+        { x: startX, y: startY, scale: startScale },
+        {
+          x: 0,
+          y: 0,
+          scale: 1,
+          ease: "none",
+          scrollTrigger: {
+            trigger: ".section-about-banner",
+            start: "top top",
+            end: "+=400",
+            scrub: 0.3,
+          },
+        },
+      );
     }
 
     // About Marquee
-    const aboutMarquee = document.querySelector('.about-marquee-content');
+    const aboutMarquee = document.querySelector(".about-marquee-content");
     if (aboutMarquee) {
       gsap.to(aboutMarquee, {
-        xPercent: -50, ease: "none",
-        scrollTrigger: { trigger: ".about-title-marquee", start: "top bottom", end: "bottom top", scrub: 1 }
+        xPercent: -50,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".about-title-marquee",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1,
+        },
       });
     }
 
     // Accordion
-    const accItems = document.querySelectorAll('.believe-acc-item');
+    const accItems = document.querySelectorAll(".believe-acc-item");
     if (accItems.length) {
       accItems.forEach((item) => {
-        const body = item.querySelector('.believe-acc-body');
-        if (!item.classList.contains('is-active')) {
-          gsap.set(body, { height: 0, overflow: 'hidden' });
+        const body = item.querySelector(".believe-acc-body");
+        if (!item.classList.contains("is-active")) {
+          gsap.set(body, { height: 0, overflow: "hidden" });
         } else {
-          gsap.set(body, { height: 'auto', overflow: 'hidden' });
+          gsap.set(body, { height: "auto", overflow: "hidden" });
         }
       });
 
       accItems.forEach((item) => {
-        const header = item.querySelector('.believe-acc-header');
-        header.addEventListener('click', function() {
-          const isActive = item.classList.contains('is-active');
-          const body = item.querySelector('.believe-acc-body');
+        const header = item.querySelector(".believe-acc-header");
+        header.addEventListener("click", function () {
+          const isActive = item.classList.contains("is-active");
+          const body = item.querySelector(".believe-acc-body");
 
           accItems.forEach((el) => {
-            if (el !== item && el.classList.contains('is-active')) {
-              el.classList.remove('is-active');
-              gsap.to(el.querySelector('.believe-acc-body'), { height: 0, duration: 0.5, ease: "power3.inOut" });
+            if (el !== item && el.classList.contains("is-active")) {
+              el.classList.remove("is-active");
+              gsap.to(el.querySelector(".believe-acc-body"), {
+                height: 0,
+                duration: 0.5,
+                ease: "power3.inOut",
+              });
             }
           });
 
           if (!isActive) {
-            item.classList.add('is-active');
-            gsap.set(body, { height: 'auto' });
+            item.classList.add("is-active");
+            gsap.set(body, { height: "auto" });
             const fullHeight = body.offsetHeight;
-            gsap.fromTo(body, { height: 0 }, { height: fullHeight, duration: 0.6, ease: "power3.inOut", onComplete: () => gsap.set(body, { height: 'auto' }) });
+            gsap.fromTo(
+              body,
+              { height: 0 },
+              {
+                height: fullHeight,
+                duration: 0.6,
+                ease: "power3.inOut",
+                onComplete: () => gsap.set(body, { height: "auto" }),
+              },
+            );
           } else {
-            item.classList.remove('is-active');
+            item.classList.remove("is-active");
             gsap.to(body, { height: 0, duration: 0.5, ease: "power3.inOut" });
           }
         });

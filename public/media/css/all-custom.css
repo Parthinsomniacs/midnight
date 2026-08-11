@@ -408,19 +408,16 @@ html.is-active:before {
 .sticky-bottom-form .col-form .form-control::-webkit-input-placeholder,
 .theme-modal .col-form .form-control::-webkit-input-placeholder {
   color: #ffffff;
-  font-family: "Montserrat", sans-serif;
 }
 
 .sticky-bottom-form .col-form .form-control:-ms-input-placeholder,
 .theme-modal .col-form .form-control:-ms-input-placeholder {
   color: #fff;
-  font-family: "Montserrat", sans-serif;
 }
 
 .sticky-bottom-form .col-form .form-control::placeholder,
 .theme-modal .col-form .form-control::placeholder {
   color: #ffffff;
-  font-family: "Montserrat", sans-serif;
 }
 
 .theme-scrollbar {
@@ -856,7 +853,6 @@ button:focus {
 }
 
 .form-control {
-  font-family: "Montserrat";
   display: block;
   width: 100%;
   border: none;
@@ -1795,28 +1791,20 @@ header {
 }
 
 /* Text Roll Animation */
-.text-roll .tr-wrap {
-  position: relative;
-  display: inline-block;
-}
-
-.text-roll .tr-bottom {
-  position: absolute;
-  inset: 0;
-}
-
 .text-roll {
   position: relative;
   display: inline-block;
   overflow: hidden;
   cursor: pointer;
   line-height: 1.2;
-  /* white-space: nowrap; */
+  vertical-align: bottom;
 }
 
 .text-roll .tr-wrap {
   position: relative;
   display: inline-block;
+  overflow: hidden;
+  height: 1.2em;
 }
 
 .text-roll .tr-top,
@@ -1864,6 +1852,25 @@ header {
 .grid-col-4 {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+}
+
+.grid-col-4 > * {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.casestudy-detail-title {
+  overflow: hidden;
+}
+
+.casestudy-detail-title .text-roll {
+  display: inline-block;
+}
+
+.casestudy-detail-title h2 {
+  font-size: clamp(20px, 3vw, 48px);
+  line-height: 1.2;
 }
 .grid-col-5 {
   display: grid;
@@ -2773,7 +2780,7 @@ header {
 .believe-acc-header {
   display: flex;
   align-items: center;
-  padding: 40px 0;
+  padding: 20px 0;
   cursor: pointer;
   transition: opacity 0.3s ease;
 }
@@ -2791,7 +2798,6 @@ header {
 }
 
 .believe-acc-title {
-  font-family: "Montserrat", sans-serif;
   font-size: 24px;
   font-weight: 500;
   color: #fff;
@@ -2831,7 +2837,36 @@ header {
   font-size: 16px;
   line-height: 1.8;
   margin-bottom: 0;
-  max-width: 550px;
+  max-width: 800px;
+}
+
+.believe-expertise {
+  display: inline-block;
+  color: #f79620;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.believe-content-heading {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.believe-points li {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 16px;
+  line-height: 2;
+  font-weight: 500;
+}
+.believe-acc-content ul li {
+  color: #fff;
 }
 
 .casestudy-card-wrapper {
@@ -2868,7 +2903,7 @@ header {
 }
 .product-detail {
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .product-detail-block:not(:last-child) {
   border-right: 1px solid rgba(17, 17, 17, 0.15);
@@ -2916,12 +2951,11 @@ header {
   width: 50px;
   height: 50px;
   min-width: 50px;
-  border-radius: 12px;
 }
 
 .case-study-page-detail-social-icon .social-icon-box svg {
-  width: 35px;
-  height: 34px;
+  width: 30px;
+  height: 30px;
 }
 
 .case-study-page-detail-social-icon .social-info {
@@ -3031,7 +3065,6 @@ header {
   height: 64px;
   min-width: 64px;
   border: 1px solid #e0e0e0;
-  border-radius: 16px;
 }
 
 .social-info {
@@ -3490,4 +3523,24 @@ header {
 .solution-desc h5 {
   font-size: 40px;
   line-height: 50px;
+}
+.mocup-img img {
+  max-width: 450px;
+  margin: 0 auto;
+}
+.bharat-app img {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.bharat-app {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+}
+
+.solution-img img {
+  width: auto;
+  margin: 0 auto;
 }
