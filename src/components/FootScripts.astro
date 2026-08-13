@@ -370,6 +370,7 @@ const jsurl = "/media/js/";
 	const cards = gsap.utils.toArray(".section-process .card");
 
 	if (cards.length) {
+		const isDesktop = window.innerWidth > 1024;
 		const introCard = cards[0];
 
 		const titles = gsap.utils.toArray(".card-title h4");
@@ -391,14 +392,14 @@ const jsurl = "/media/js/";
 		const cardImgWrapper = introCard.querySelector(".card-img");
 		const cardImg = introCard.querySelector(".card-img img") || introCard.querySelector(".card-img video");
 
-		if (cardImgWrapper) {
+		if (isDesktop && cardImgWrapper) {
 			gsap.set(cardImgWrapper, {
 				scale: 0.5,
 				borderRadius: "400px"
 			});
 		}
 
-		if (cardImg) {
+		if (isDesktop && cardImg) {
 			gsap.set(cardImg, {
 				scale: 1.5
 			});
@@ -460,7 +461,7 @@ const jsurl = "/media/js/";
 
 		setupCardMarquee();
 
-		if (cardImgWrapper && cardImg) {
+		if (isDesktop && cardImgWrapper && cardImg) {
 			ScrollTrigger.create({
 				trigger: introCard,
 				start: "top top",
@@ -509,24 +510,45 @@ const jsurl = "/media/js/";
 			});
 		}
 
-		cards.forEach((card, index) => {
+		if (isDesktop) {
+			cards.forEach((card, index) => {
 
-			const isLastCard = index === cards.length - 1;
+				const isLastCard = index === cards.length - 1;
 
-			ScrollTrigger.create({
-				trigger: card,
-				start: "top top",
-				end: isLastCard ? "+=100vh" : "top top",
-				endTrigger: isLastCard ? null : cards[cards.length - 1],
-				pin: true,
-				pinSpacing: isLastCard,
+				ScrollTrigger.create({
+					trigger: card,
+					start: "top top",
+					end: isLastCard ? "+=100vh" : "top top",
+					endTrigger: isLastCard ? null : cards[cards.length - 1],
+					pin: true,
+					pinSpacing: isLastCard,
+				});
+
 			});
+		} else {
+			// Mobile/tablet: pin all cards including first (video sticky, others stack on top)
+			cards.forEach((card, index) => {
 
-		});
+				const isLastCard = index === cards.length - 1;
+
+				ScrollTrigger.create({
+					trigger: card,
+					start: "top top",
+					end: isLastCard ? "+=100vh" : "top top",
+					endTrigger: isLastCard ? null : cards[cards.length - 1],
+					pin: true,
+					pinSpacing: isLastCard,
+				});
+
+			});
+		}
 
 		cards.forEach((card, index) => {
 
 			if (index < cards.length - 1) {
+
+				// On mobile, don't fade out any card - they stay stacked
+				if (!isDesktop) return;
 
 				const cardWrapper = card.querySelector(".card-wrapper");
 
@@ -557,29 +579,35 @@ const jsurl = "/media/js/";
 
 			if (index > 0) {
 
-				const cardImg = card.querySelector(".card-img img");
+				const cardImg = card.querySelector(".card-img img") || card.querySelector(".card-img picture img");
 				const imgContainer = card.querySelector(".card-img");
 
 				if (cardImg && imgContainer) {
-					ScrollTrigger.create({
-						trigger: card,
-						start: "top bottom",
-						end: "top top",
+					if (isDesktop) {
+						ScrollTrigger.create({
+							trigger: card,
+							start: "top bottom",
+							end: "top top",
 
-						onUpdate: (self) => {
+							onUpdate: (self) => {
 
-							const progress = self.progress;
+								const progress = self.progress;
 
-							gsap.set(cardImg, {
-								scale: 2 - progress
-							});
+								gsap.set(cardImg, {
+									scale: 2 - progress
+								});
 
-							gsap.set(imgContainer, {
-								borderRadius: `${150 - progress * 125}px`
-							});
+								gsap.set(imgContainer, {
+									borderRadius: `${150 - progress * 125}px`
+								});
 
-						}
-					});
+							}
+						});
+					} else {
+						// Mobile: no border-radius, no scale animation
+						gsap.set(imgContainer, { borderRadius: "0px" });
+						gsap.set(cardImg, { scale: 1 });
+					}
 				}
 
 			}
@@ -594,14 +622,20 @@ const jsurl = "/media/js/";
 			const cardTitleChars = card.querySelectorAll(".char span");
 
 			if (cardDescription && cardTitleChars.length) {
-				ScrollTrigger.create({
-					trigger: card,
-					start: "top top",
+				if (!isDesktop) {
+					// Mobile: show content immediately, no animation
+					gsap.set(cardTitleChars, { x: "0%" });
+					gsap.set(cardDescription, { x: 0, opacity: 1 });
+				} else {
+					ScrollTrigger.create({
+						trigger: card,
+						start: "top top",
 
-					onEnter: () => animateContentIn(cardTitleChars, cardDescription),
+						onEnter: () => animateContentIn(cardTitleChars, cardDescription),
 
-					onLeaveBack: () => animateContentOut(cardTitleChars, cardDescription)
-				});
+						onLeaveBack: () => animateContentOut(cardTitleChars, cardDescription)
+					});
+				}
 			}
 
 		});
