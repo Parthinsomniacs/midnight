@@ -1,0 +1,444 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import Header from "../../components/Header.astro";
+import FootScripts from "../../components/FootScripts.astro";
+
+const imagesurl = "/media/images/";
+---
+
+<MainLayout
+    title="Document Management System | Midnight Digital Pvt Ltd"
+    swiper={true}
+    page="home"
+    pagetype="onepage"
+>
+    <Header page="home" />
+
+    <section class="section-casestudy-detail section-xs pb-2">
+        <div class="custom-container-1840">
+            <div class="grid-col-4 is-align-items-center">
+                <div class="casstudy-detail-logo">
+                    <!-- <picture>
+                        <img
+                            class="mb-0"
+                            src={`${imagesurl}product/new-product/dms/logo1.webp`}
+                            alt="DMS"
+                            width="145"
+                            height="70"
+                        />
+                    </picture> -->
+                </div>
+                <div
+                    class="section-title theme-padding-xs mb-0 has-text-centered line-reveal"
+                >
+                    <h2 class="text-roll">DMS</h2>
+                </div>
+            </div>
+            <div
+                class="theme-h-line theme-outerline-left theme-outerline-right"
+            >
+            </div>
+            <div class="grid-col-2">
+                <div
+                    class="detai-page-wrapper rr-v-lines-none gray-bg border-left border-right"
+                >
+                    <div
+                        class="h-100 is-flex is-flex-direction-column is-justify-content-space-between"
+                    >
+                        <div class="theme-padding-xs section-xs">
+                            <h3 class="mb-5 fw-500 line-reveal">
+                                Project Overview
+                            </h3>
+                            <p class="has-text-justified line-reveal">
+                                The Document Management System is a centralized,
+                                secure, and role-based platform designed to
+                                simplify the complete document lifecycle—from
+                                creating and managing templates to approval,
+                                version control, and final document
+                                generation.The platform enables organizations to
+                                create reusable business document templates,
+                                manage approval workflows, control user access
+                                through policies, and generate documents using
+                                dynamic or static data. It provides a structured
+                                and efficient way to manage documents while
+                                reducing manual work and improving consistency
+                                across business processes.
+                            </p>
+                        </div>
+                        <div class="is-relative">
+                            <div class="theme-h-line"></div>
+                            <div class="pb-0">
+                                <div
+                                    class="product-detail-block section-xs theme-padding-xs line-reveal"
+                                >
+                                    <h6>Technology Stack</h6>
+                                    <ul
+                                        class="list-point is-flex is-flex-wrap-wrap is-gap-4 mt-3"
+                                    >
+                                        <li>Express</li>
+                                        <li>BullMQ worker</li>
+                                        <li>React</li>
+                                        <li>Vite</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="detai-page-wrapper rr-v-lines-none gray-bg border-right"
+                >
+                    <div class="case-study-image reveal-media">
+                        <picture>
+                            <img
+                                src={`${imagesurl}product/new-product/doc-manage-system/8.webp`}
+                                alt="Case Study"
+                                width="915"
+                                height="815"
+                            />
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-image pb-0">
+        <div class="theme-h-line theme-outerline-left"></div>
+        <div class="container custom-container-1840">
+            <div class="image-container">
+                <picture>
+                    <img
+                        src={`${imagesurl}product/new-product/doc-manage-system/8.webp`}
+                        alt="Banner"
+                        width="1920"
+                        height="1080"
+                    />
+                </picture>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-case-detail section-xs pb-0">
+        <div class="theme-h-line theme-outerline-left theme-outerline-right">
+        </div>
+        <div class="custom-container-1840">
+            <div class="case-detail-layout">
+                <!-- Left Side - Sticky -->
+                <div class="case-detail-left section-xs theme-padding-xs">
+                    <div class="section-title">
+                        <h2 class="line-reveal">The Client</h2>
+                    </div>
+                    <div class="client-desc line-reveal">
+                        <p>
+                            The client needed a centralized solution to manage
+                            business documents and templates efficiently. The
+                            existing process involved multiple manual steps,
+                            making it difficult to maintain document
+                            consistency, manage different versions, control
+                            access, and track approvals.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Side - Scrollable -->
+                <div class="case-detail-right">
+                    <div class="case-detail-block section-xs theme-padding-xs">
+                        <h3 class="case-detail-heading line-reveal">
+                            Core Requirements
+                        </h3>
+                        <ul class="list-point line-reveal">
+                            <li>
+                                We developed a comprehensive Document Management
+                                System with the following key capabilities:
+                            </li>
+                            <li>
+                                Secure Login & Role-Based Access - Microsoft SSO
+                                enables secure user authentication, while role
+                                and permission-based access ensures users can
+                                access only the features and resources relevant
+                                to them.
+                            </li>
+                            <li>
+                                Centralized Dashboard - A single dashboard
+                                provides quick access to Templates, Projects,
+                                Documents, Approvals, Users, Policies, and other
+                                important areas of the platform.
+                            </li>
+                            <li>
+                                Template Management - Users can create, edit,
+                                manage, approve, and reuse business document
+                                templates by configuring details such as
+                                project, document type, platform, approval
+                                workflow, and description.
+                            </li>
+                            <li>
+                                Advanced Template Editor - A Word-like document
+                                editor allows users to create professional
+                                documents with features such as text formatting,
+                                tables, images, alignment, page breaks, margins,
+                                page numbering, conditions, search, copy/paste,
+                                and more.
+                            </li>
+                            <li>
+                                Approval Workflow - Templates can be submitted
+                                through configurable approval workflows. Users
+                                can track the status of templates through stages
+                                such as Draft, Workflow Pending, and Passed
+                                Workflow.
+                            </li>
+                            <li>
+                                Import & Export - Users can import DOCX files
+                                and template JSON files, either replacing
+                                existing content or appending imported content.
+                                Documents and templates can also be previewed
+                                and downloaded.
+                            </li>
+                            <li>
+                                Policy & Access Management - Administrators can
+                                create and manage access policies using
+                                Allow/Deny rules, actions, resources, and
+                                conditions. Policies can be assigned to users,
+                                groups, and roles.
+                            </li>
+                            <li>
+                                Document Generation - Approved templates can be
+                                used to generate business documents by
+                                populating static or dynamic variables.
+                                Generated documents can be previewed and
+                                downloaded.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="theme-h-line"></div>
+
+                    <div class="case-detail-block section-xs theme-padding-xs">
+                        <h3 class="case-detail-heading line-reveal">
+                            The Solution
+                        </h3>
+                        <p class="line-reveal">
+                            WThe platform provides a structured and scalable
+                            approach to document management by bringing
+                            **template creation, editing, approvals, version
+                            control, access management, and document
+                            generation** into one centralized system. It helps
+                            organizations reduce manual effort, improve document
+                            consistency, streamline approvals, and maintain
+                            better control over the complete document lifecycle.
+                        </p>
+                    </div>
+                    <div class="theme-h-line"></div>
+                    <div class="case-detail-block section-xs theme-padding-xs">
+                        <h3 class="case-detail-heading line-reveal">
+                            Client Challenges
+                        </h3>
+                        <p class="line-reveal">
+                            The client needed a centralized solution to manage
+                            business documents and templates efficiently. The
+                            existing process involved multiple manual steps,
+                            making it difficult to maintain document
+                            consistency, manage different versions, control
+                            access, and track approvals.
+                        </p>
+                    </div>
+                    <div class="theme-h-line"></div>
+                    <div class="case-detail-block section-xs theme-padding-xs">
+                        <h3 class="case-detail-heading line-reveal">
+                            Challenges
+                        </h3>
+                        <p>Managing multiple document templates and versions</p>
+                        <ul class="list-point line-reveal">
+                            <li>Maintaining consistent document formatting.</li>
+                            <li>Handling approval workflows manually.</li>
+                            <li>
+                                HControlling access based on users, groups, and
+                                roles.
+                            </li>
+                            <li>
+                                Generating documents with dynamic information.
+                            </li>
+                            <li>Managing reusable templates efficiently.</li>
+                            <li>Tracking active and approved versions.</li>
+                            <li>
+                                Importing and exporting documents in different
+                                formats.
+                            </li>
+                            <li>
+                                Reducing dependency on manual document creation.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="theme-h-line"></div>
+                    <div class="case-detail-block section-xs theme-padding-xs">
+                        <h3 class="case-detail-heading line-reveal">Results</h3>
+                        <ul class="list-point line-reveal">
+                            <li>
+                                The platform provides a structured and scalable
+                                approach to document management by bringing
+                                **template creation, editing, approvals, version
+                                control, access management, and document
+                                generation** into one centralized system.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="theme-h-line"></div>
+                    <div class="case-detail-block section-xs theme-padding-xs">
+                        <h3 class="case-detail-heading line-reveal">
+                            Highlighted Features
+                        </h3>
+                        <ul class="list-point line-reveal">
+                            <li>
+                                Secure Login & Role-Based Access.
+                            </li>
+                            <li>
+                                Centralized Dashboard.
+                            </li>
+                            <li>
+                                Template Management.
+                            </li>
+                            <li>
+                               Advanced Template Editor.
+                            </li>
+                            <li>
+                                Approval Workflow.
+                            </li>
+                            <li>
+                                Version Management.
+                            </li>
+                            <li>
+                                Import & Export.
+                            </li>
+                            <li>
+                                Policy & Access Management.
+                            </li>
+                            <li>
+                                Document Generation.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-footer section-xs pt-0">
+        <div class="theme-h-line theme-outerline-left"></div>
+        <div class="container custom-container-1840">
+            <div class="contact-us-title section-xs pb-0">
+                <div class="section-title mb-0">
+                    <h3 class="fw-500 is-uppercase font-orbitron pl-4">
+                        Let's Talk
+                    </h3>
+                    <div class="theme-h-line"></div>
+                </div>
+                <div class="section-title pl-4">
+                    <h2 class="text-roll">Contact Us</h2>
+                </div>
+            </div>
+            <div
+                class="theme-h-line theme-outerline-left theme-outerline-right"
+            >
+            </div>
+            <div class="footer-box">
+                <div class="media-wrapper">
+                    <div class="footer-logo pl-4">
+                        <picture>
+                            <img
+                                src={`${imagesurl}logo.svg`}
+                                alt="Midnight Digital Logo"
+                                width="145"
+                                height="70"
+                            />
+                        </picture>
+                    </div>
+                    <div class="social-links">
+                        <ul>
+                            {
+                                [
+                                    "Facebook",
+                                    "Instagram",
+                                    "LinkedIn",
+                                    "Twitter",
+                                ].map((social) => (
+                                    <li>
+                                        <a href="#">
+                                            {social}
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="currentColor"
+                                            >
+                                                <>
+                                                    <path
+                                                        stroke="none"
+                                                        d="M0 0h24v24H0z"
+                                                        fill="none"
+                                                    />
+                                                    <path d="M9.707 5.293l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 1 1 -1.414 -1.414l5.293 -5.293l-5.293 -5.293a1 1 0 0 1 1.414 -1.414" />
+                                                </>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                ))
+                            }
+                        </ul>
+                    </div>
+                    <div class="copyright-text pl-4">
+                        <p>
+                            Copyright &copy; <b>Midnight</b>
+                            {new Date().getFullYear()}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="theme-h-line theme-outerline-left theme-outerline-right"
+            >
+            </div>
+        </div>
+    </section>
+
+    <FootScripts page="home" pagetype="onepage" />
+
+    <script is:inline>
+        // Reveal animation on scroll for .reveal-media elements
+        document.addEventListener("DOMContentLoaded", function () {
+            if (
+                typeof gsap === "undefined" ||
+                typeof ScrollTrigger === "undefined"
+            )
+                return;
+
+            var elements = document.querySelectorAll(".reveal-media");
+            if (!elements.length) return;
+
+            elements.forEach(function (el) {
+                gsap.set(el, {
+                    clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
+                });
+
+                gsap.to(el, {
+                    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+                    duration: 1.2,
+                    ease: "power3.inOut",
+                    scrollTrigger: {
+                        trigger: el,
+                        start: "top 80%",
+                        once: true,
+                    },
+                });
+            });
+        });
+    </script>
+
+    <script is:inline>
+        // Disable sticky on mobile - ScrollTrigger handles responsive
+        (function () {
+            if (typeof ScrollTrigger === "undefined") return;
+            // Refresh ScrollTrigger after layout settles
+            ScrollTrigger.refresh();
+        })();
+    </script>
+</MainLayout>
