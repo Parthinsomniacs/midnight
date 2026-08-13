@@ -249,6 +249,8 @@ const jsurl = "/media/js/";
 
 		if (!image) return;
 
+		let yVal = window.innerWidth <= 1799 ? 8 : 15;
+
 		let tl = gsap.timeline({
 			scrollTrigger: {
 				trigger: container,
@@ -257,10 +259,10 @@ const jsurl = "/media/js/";
 			},
 		});
 		tl.from(image, {
-			yPercent: -15,
+			yPercent: -yVal,
 			ease: "none",
 		}).to(image, {
-			yPercent: 15,
+			yPercent: yVal,
 			ease: "none",
 		});
 	});

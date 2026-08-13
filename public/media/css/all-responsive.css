@@ -6,8 +6,29 @@
   .years {
     font-size: clamp(80px, 10vw, 290px);
   }
+  .section-title h2 {
+    font-size: 70px;
+    line-height: 80px;
+  }
+  .section-head h3,
+  .testimonial-title h3,
+  .section-title h3 {
+    font-size: 24px;
+    line-height: 34px;
+  }
 }
 @media screen and (max-width: 1599px) {
+  .section-title h2 {
+    font-size: 60px;
+    line-height: 70px;
+  }
+  .compny-log img {
+    width: 150px;
+  }
+  .tab-list .tab a {
+    font-size: 20px;
+    line-height: 30px;
+  }
   .theme-padding {
     padding-left: 100px;
     padding-right: 100px;
@@ -30,11 +51,35 @@
     padding: 30px 15px;
   }
   .header-wrapper {
-    min-height: 80px;
+    min-height: 86px;
   }
 }
 
 @media screen and (max-width: 1408px) {
+  .section-head h3,
+  .testimonial-title h3,
+  .section-title h3 {
+    font-size: 22px;
+    line-height: 32px;
+  }
+  .compny-log img {
+    width: 130px;
+  }
+  .serve-content {
+    grid-template-columns: 1fr 180px;
+  }
+  .serve-ul {
+    position: relative;
+    z-index: 1;
+    background-color: #f5f5f5;
+    margin: 0 1px;
+  }
+  .serve-name {
+    grid-template-columns: 1fr 2fr;
+  }
+  .serve-num {
+    border-right: 1px solid rgba(17, 17, 17, 0.15);
+  }
   .section-title h1 {
     font-size: 60px;
     line-height: 70px;
@@ -72,12 +117,37 @@
   .header-get-in-touch {
     padding: 30px 15px;
   }
-  .header-wrapper {
-    min-height: 80px;
-  }
 }
 
 @media screen and (max-width: 1216px) {
+  .section-head h3,
+  .testimonial-title h3,
+  .section-title h3 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .tab-list .tab a {
+    padding: 18px 10px;
+  }
+  .compny-log img {
+    width: 100px;
+  }
+  .serve-content {
+    grid-template-columns: 1fr 150px;
+  }
+  .header-wrapper {
+    grid-template-columns: 1fr 2fr 1fr;
+    min-height: 85px;
+    position: unset;
+    background-color: unset;
+    margin-left: unset;
+  }
+  .theme-menu ul {
+    background-color: transparent;
+  }
+  .theme-menu ul .menu-item:nth-child(odd) {
+    border-left: unset;
+  }
   .menu-item,
   .header-get-in-touch {
     margin-right: 20px;
@@ -321,6 +391,29 @@
 }
 
 @media screen and (max-width: 1024px) {
+  .section-industries-we-serve.section-margin {
+    margin-top: 0;
+  }
+  .compny-log-box {
+    display: none;
+  }
+  .content-tab {
+    border-right: unset;
+  }
+  .serve-content {
+    grid-template-columns: auto;
+  }
+  .tab-list .tab a {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .tab-list .tab a {
+    padding: 5px 10px;
+  }
+  .serve-name {
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+  }
   .section-title h1 {
     font-size: 45px;
     line-height: 55px;
@@ -532,9 +625,38 @@
 }
 
 @media screen and (max-width: 768px) {
+  .content-tab {
+    margin-left: 1px;
+  }
+  .section-head {
+    grid-template-columns: auto;
+  }
+  .serve-num {
+    display: none;
+  }
+  .serve-wrapper .serve-li {
+    border-bottom: 1px solid rgba(17, 17, 17, 0.15);
+  }
+  .serve-name {
+    grid-template-columns: auto;
+  }
+  .section-title h2 {
+    font-size: 28px;
+    line-height: 38px;
+  }
+  .serve-wrapper {
+    grid-template-columns: auto;
+  }
   .header-wrapper {
-    grid-template-columns: 1fr 2fr 250px;
+    grid-template-columns: 1fr 2fr 180px;
     position: relative;
+    z-index: 1;
+    /* background-color: #f5f5f5; */
+    margin-left: 3px;
+  }
+  .menu-item,
+  .header-get-in-touch {
+    padding: 20px 15px;
   }
 
   .top-line,
@@ -649,7 +771,6 @@
   }
 
   .tab-list .tab a {
-    width: 160px;
     padding: 12px 24px;
   }
   .section-title h1 {

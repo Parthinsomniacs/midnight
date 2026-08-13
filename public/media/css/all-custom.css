@@ -1509,11 +1509,18 @@ input:-webkit-autofill {
   justify-content: space-between;
   gap: 10px;
   flex-wrap: wrap;
+  height: 100%;
+}
+
+.tab-list .tab {
+  flex: 1;
+  display: flex;
 }
 
 .tab-list .tab a {
   position: relative;
-  display: block;
+  display: flex;
+  align-items: center;
   line-height: 1;
   padding: 20px 14px;
   border: 1px solid transparent;
@@ -2014,7 +2021,7 @@ header {
 .serve-name {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: flex-start;
+  align-items: stretch;
 }
 
 .serve-num {
@@ -3553,4 +3560,15 @@ header {
 }
 .theme-menu ul .menu-item:nth-child(odd){
   border-left: 1px solid rgba(17, 17, 17, 0.15);
+}
+
+.image-container {
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  will-change: transform;
 }
