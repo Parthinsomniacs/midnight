@@ -2930,6 +2930,7 @@ header {
 .product-detail {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  border-bottom: 1px solid rgba(17, 17, 17, 0.15);
 }
 .product-detail-block:not(:last-child) {
   border-right: 1px solid rgba(17, 17, 17, 0.15);
