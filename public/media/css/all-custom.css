@@ -2196,9 +2196,10 @@ header {
 
 .card {
   position: relative;
-  width: 100vw;
-  height: 100svh;
-  padding: 1.5em;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1920 / 880;
+  padding: 0;
 }
 
 .white-overlay::before {
@@ -2235,7 +2236,7 @@ header {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  border-radius: 150px;
+  border-radius: 0;
   z-index: 3;
 }
 
@@ -2243,7 +2244,6 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(2);
 }
 
 .card-img video {
@@ -2257,18 +2257,24 @@ header {
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   z-index: 4;
 }
 
 .card-content .card-title {
   width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: none;
   text-align: center;
+  margin-bottom: 16px;
+}
+
+.card-content .card-title .char {
+  overflow: hidden;
 }
 
 .card-content .card-title h4 {
@@ -2282,7 +2288,7 @@ header {
 .card-content .card-description {
   text-align: center;
   width: 40%;
-  margin-bottom: 3em;
+  margin-bottom: 0;
   position: relative;
   transform: translateX(40px);
   opacity: 0;
@@ -2960,7 +2966,9 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 12px;
+    padding: 0 10px;
 }
 
 .case-study-page-detail-social-icon .social-block {
@@ -3036,6 +3044,7 @@ header {
 }
 
 @media screen and (max-width: 1024px) {
+
   .case-detail-layout {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -3561,7 +3570,7 @@ header {
   width: auto;
   margin: 0 auto;
 }
-.theme-menu ul .menu-item:nth-child(odd){
+.theme-menu ul .menu-item:nth-child(odd) {
   border-left: 1px solid rgba(17, 17, 17, 0.15);
 }
 

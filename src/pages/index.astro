@@ -99,9 +99,21 @@ const imagesurl = "/media/images/";
     <div class="container custom-container-1840">
       <div class="image-container">
         <picture>
-          <source media="(max-width:412px)" srcset={`${imagesurl}banner/banner-xs-new.webp`} type="image/webp" />
-          <source media="(max-width:768px)" srcset={`${imagesurl}banner/banner-sm-new.webp`} type="image/webp" />
-          <source media="(max-width:1000px)" srcset={`${imagesurl}banner/banner-md-new.webp`} type="image/webp" />
+          <source
+            media="(max-width:412px)"
+            srcset={`${imagesurl}banner/banner-xs-new.webp`}
+            type="image/webp"
+          />
+          <source
+            media="(max-width:768px)"
+            srcset={`${imagesurl}banner/banner-sm-new.webp`}
+            type="image/webp"
+          />
+          <source
+            media="(max-width:1000px)"
+            srcset={`${imagesurl}banner/banner-md-new.webp`}
+            type="image/webp"
+          />
           <img
             src={`${imagesurl}banner/banner-xl-new.webp`}
             alt="Banner"
@@ -233,7 +245,8 @@ const imagesurl = "/media/images/";
   </section>
 
   <section class="section-process section-xs">
-    <div class="cards">
+    <div class="custom-container-1840">
+      <div class="cards">
       <div class="card">
         <div class="card-wrapper">
           <div class="card-marquee">
@@ -310,16 +323,32 @@ const imagesurl = "/media/images/";
               </div>
               <div class="card-img white-overlay is-relative">
                 <picture>
-                  <source media="(max-width:412px)" srcset={`${imagesurl}process/${card.img.replace('.webp', '-412.webp')}`} type="image/webp" />
-                  <source media="(max-width:768px)" srcset={`${imagesurl}process/${card.img.replace('.webp', '-768.webp')}`} type="image/webp" />
-                  <source media="(max-width:1000px)" srcset={`${imagesurl}process/${card.img.replace('.webp', '-1000.webp')}`} type="image/webp" />
-                  <img src={`${imagesurl}process/${card.img}`} alt={card.title} />
+                  <source
+                    media="(max-width:412px)"
+                    srcset={`${imagesurl}process/${card.img.replace(".webp", "-xs.webp")}`}
+                    type="image/webp"
+                  />
+                  <source
+                    media="(max-width:768px)"
+                    srcset={`${imagesurl}process/${card.img.replace(".webp", "-sm.webp")}`}
+                    type="image/webp"
+                  />
+                  <source
+                    media="(max-width:1000px)"
+                    srcset={`${imagesurl}process/${card.img.replace(".webp", "-md.webp")}`}
+                    type="image/webp"
+                  />
+                  <img
+                    src={`${imagesurl}process/${card.img}`}
+                    alt={card.title}
+                  />
                 </picture>
               </div>
             </div>
           </div>
         ))
       }
+    </div>
     </div>
   </section>
 
@@ -349,9 +378,16 @@ const imagesurl = "/media/images/";
             {
               [1, 2, 3, 4].map((col) => (
                 <div class={`parallax-column column-${col}`}>
-                  {[1, 2, 3, 4, 5].map((img) => (
+                  {[
+                    { img: "1.webp", link: "/runr-kids" },
+                    { img: "2.webp", link: "/runrgo" },
+                    { img: "3.webp", link: "/the-fund-forge" },
+                    { img: "4.webp", link: "/runr-reviews" },
+                  ].map((item) => (
                     <div class="parallax-item">
-                      <img src={`${imagesurl}product/${img}.webp`} alt="" />
+                      <a href={item.link}>
+                        <img src={`${imagesurl}product/${item.img}`} alt="" />
+                      </a>
                     </div>
                   ))}
                 </div>
@@ -415,22 +451,48 @@ const imagesurl = "/media/images/";
               {
                 [
                   {
-                    img: "ift-enpower-hackathon.webp",
-                    title: "IFT Enpower Hackathon",
+                    img: "uzeir.webp",
+                    title: "Uzeir",
+                    link: "/product",
                   },
                   {
-                    img: "mishi-marine-solution.webp",
-                    title: "Mishi Marine Solution",
+                    img: "allwyn.webp",
+                    title: "Allwyn",
+                    link: "/product",
                   },
-                  { img: "ssx-india.webp", title: "SSX India" },
-                  { img: "vigo-nets.webp", title: "Vigo Nets" },
                   {
-                    img: "mishi-marine-solution.webp",
-                    title: "Mishi Marine Solution",
+                    img: "antrang.webp",
+                    title: "Antrang",
+                    link: "/product",
+                  },
+                  {
+                    img: "education-erp.webp",
+                    title: "Education ERP",
+                    link: "/product",
+                  },
+                  {
+                    img: "alap.webp",
+                    title: "Alap",
+                    link: "/product",
+                  },
+                  {
+                    img: "mukti-app.webp",
+                    title: "Mukti App",
+                    link: "/product",
+                  },
+                  {
+                    img: "jay-ambaji-app.webp",
+                    title: "Jay Ambaji App",
+                    link: "/product",
+                  },
+                  {
+                    img: "skoda.webp",
+                    title: "Skoda",
+                    link: "/product",
                   },
                 ].map((project) => (
                   <div class="swiper-slide">
-                    <div class="prohect-img">
+                    <a href={project.link} class="prohect-img">
                       <picture>
                         <img
                           src={`${imagesurl}projects/${project.img}`}
@@ -442,7 +504,7 @@ const imagesurl = "/media/images/";
                       <div class="project-title">
                         <p>{project.title}</p>
                       </div>
-                    </div>
+                    </a>
                   </div>
                 ))
               }
@@ -676,8 +738,8 @@ const imagesurl = "/media/images/";
       },
       breakpoints: {
         0: { slidesPerView: 1 },
-        768: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 },
+        575: { slidesPerView: 1 },
+        1408: { slidesPerView: 3 },
       },
     });
   </script>
