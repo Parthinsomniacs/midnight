@@ -1,13 +1,13 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
-import Header from "../components/Header.astro";
-import FootScripts from "../components/FootScripts.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
+import Header from "../../components/Header.astro";
+import FootScripts from "../../components/FootScripts.astro";
 
 const imagesurl = "/media/images/";
 ---
 
 <MainLayout
-  title="runrgo | Midnight Digital Pvt Ltd"
+  title="Skoda | Midnight Digital Pvt Ltd"
   swiper={true}
   page="home"
   pagetype="onepage"
@@ -21,8 +21,8 @@ const imagesurl = "/media/images/";
           <picture>
             <img
               class="mb-0"
-              src={`${imagesurl}case-study/all-case-study/runrgo/runr-go-logo.svg`}
-              alt="Midnight Digital"
+              src={`${imagesurl}product/new-product/skoda/logo.svg`}
+              alt="Alap"
               width="145"
               height="70"
             />
@@ -31,38 +31,7 @@ const imagesurl = "/media/images/";
         <div
           class="section-title theme-padding-xs mb-0 has-text-centered line-reveal"
         >
-          <h2 class="text-roll">runrgo</h2>
-        </div>
-        <div class="case-study-page-detail-social-icon">
-          <!-- Instagram -->
-          <a
-            href="https://www.instagram.com/runr.go/"
-            target="_blank"
-            class="social-block"
-          >
-            <div class="social-icon-box">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"
-                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-                  d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4l0 -8"
-                ></path><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"
-                ></path><path d="M16.5 7.5v.01"></path></svg
-              >
-            </div>
-            <div class="social-info">
-              <h5 class="social-name">Instagram</h5>
-              <span class="social-username">@runrkids</span>
-            </div>
-          </a>
+          <h2 class="text-roll">Skoda</h2>
         </div>
       </div>
       <div class="theme-h-line theme-outerline-left theme-outerline-right">
@@ -77,45 +46,31 @@ const imagesurl = "/media/images/";
             <div class="theme-padding-xs section-xs">
               <h3 class="mb-5 fw-500 line-reveal">Project Overview</h3>
               <p class="has-text-justified line-reveal">
-                RunrGo is a comprehensive event management platform built for
-                marathons, running communities, cycling events, and fitness
-                challenges. The platform enables organizers to create, manage,
-                and promote events while providing participants with a seamless
-                registration and event experience.
+                open to Boys Under-12 and Under 16 and Girls Under 16 wherein
+                participants will get a chance to demonstrate their bowling and
+                batting skills to a panel of National level selectors who will
+                assign points to every ball batted and bowled. The competition
+                will be held in 59 cities across India to identify the top
+                performing cricketer from their respective categories.
               </p>
             </div>
             <div class="is-relative">
               <div class="theme-h-line"></div>
-              <div class="grid-col-1 pb-0 runrgo">
+              <div class="pb-0">
                 <div
                   class="product-detail-block section-xs theme-padding-xs line-reveal"
                 >
-                  <h6>Frontend</h6>
-                  <ul class="list-point">
-                    <li>Next.js</li>
+                  <h6>Technology Stack</h6>
+                  <ul
+                    class="list-point is-flex is-flex-wrap-wrap is-gap-4 mt-3"
+                  >
+                    <li>node</li>
+                    <li>flutter</li>
+                    <li>Android</li>
                   </ul>
-                </div>
-                <div
-                  class="product-detail-block section-xs theme-padding-xs line-reveal"
-                >
-                  <h6>Backend</h6>
-                  <ul class="list-point">
-                    <li>Node.js</li>
-                  </ul>
-                </div>
-                <div
-                  class="product-detail-block section-xs theme-padding-xs line-reveal"
-                >
-                  <h6>Database</h6>
-                  <p>MongoDB</p>
-                </div>
-                <div
-                  class="product-detail-block section-xs theme-padding-xs line-reveal"
-                >
-                  <h6>CMS</h6>
-                  <p>Custom Admin Panel</p>
                 </div>
               </div>
+              <div class="theme-h-line"></div>
             </div>
           </div>
         </div>
@@ -123,7 +78,7 @@ const imagesurl = "/media/images/";
           <div class="case-study-image reveal-media">
             <picture>
               <img
-                src={`${imagesurl}case-study/all-case-study/runrgo/runr-banner.webp`}
+                src={`${imagesurl}product/new-product/skoda/5.webp`}
                 alt="Case Study"
                 width="915"
                 height="815"
@@ -133,49 +88,6 @@ const imagesurl = "/media/images/";
         </div>
       </div>
     </div>
-    <div class="theme-h-line theme-outerline-left theme-outerline-right"></div>
-  </section>
-
-  <section class="section-client section-xs">
-    <div class="theme-h-line theme-outerline-left theme-outerline-right"></div>
-    <div class="custom-container-1840">
-      <div class="grid-col-2">
-        <div class="client-video rr-v-lines-none reveal-media">
-          <video autoplay muted loop playsinline width="100%" height="100%">
-            <source
-              src={`${imagesurl}case-study/all-case-study/runr-kids/client-video.mp4`}
-              type="video/mp4"
-            />
-          </video>
-        </div>
-        <div
-          class="theme-padding-xs section-xs rr-v-lines-none gray-bg border-right"
-        >
-          <div class="section-title text-rev line-reveal">
-            <h2>Services Provided</h2>
-            <span class="title-tagline"
-              >For this project, we delivered a complete eCommerce solution,
-              including:</span
-            >
-          </div>
-          <div class="client-desc">
-            <ul class="list-point line-reveal">
-              <li>UI/UX Design</li>
-              <li>Website Design & Development</li>
-              <li>Custom Event Management Platform</li>
-              <li>Registration System Development</li>
-              <li>Payment Gateway Integration</li>
-              <li>Admin Panel Development</li>
-              <li>API Integration</li>
-              <li>Performance Optimization</li>
-              <li>QA & Testing</li>
-              <li>Deployment & Support</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="theme-h-line theme-outerline-left theme-outerline-right"></div>
   </section>
 
   <section class="section-image pb-0">
@@ -184,7 +96,7 @@ const imagesurl = "/media/images/";
       <div class="image-container">
         <picture>
           <img
-            src={`${imagesurl}case-study/all-case-study/runrgo/runrgo.webp`}
+            src={`${imagesurl}product/new-product/skoda/5.webp`}
             alt="Banner"
             width="1920"
             height="1080"
@@ -196,6 +108,7 @@ const imagesurl = "/media/images/";
 
   <section class="section-case-detail section-xs pb-0">
     <div class="theme-h-line theme-outerline-left theme-outerline-right"></div>
+
     <div class="custom-container-1840">
       <div class="case-detail-layout">
         <!-- Left Side - Sticky -->
@@ -203,116 +116,212 @@ const imagesurl = "/media/images/";
           <div class="section-title">
             <h2 class="line-reveal">The Client</h2>
           </div>
+
           <div class="client-desc line-reveal">
             <p>
-              RunrGo is a sports and fitness event platform that connects
-              runners, cyclists, event organizers, and fitness enthusiasts
-              through a centralized digital ecosystem. The client wanted an
-              easy-to-use platform that could simplify event registrations,
-              participant management, payments, and event promotion.
+              ŠKODA AUTO India is a leading automotive brand that believes in
+              creating meaningful experiences beyond mobility. Through ŠKODA
+              Single Wicket, the brand extends this philosophy into cricket by
+              supporting young talent and building stronger connections with the
+              cricketing community.
             </p>
           </div>
         </div>
 
         <!-- Right Side - Scrollable -->
         <div class="case-detail-right">
+          <!-- Core Requirements -->
           <div class="case-detail-block section-xs theme-padding-xs">
             <h3 class="case-detail-heading line-reveal">Core Requirements</h3>
+
             <ul class="list-point line-reveal">
-              <li>Event listing platform</li>
-              <li>Online event registration</li>
-              <li>Secure payment integration</li>
-              <li>Participant management</li>
-              <li>Organizer dashboard</li>
-              <li>Event categories</li>
-              <li>Mobile responsive website</li>
-              <li>User login & profile management</li>
-              <li>Fast performance</li>
-              <li>Scalable architecture</li>
+              <li>
+                Create a dedicated digital platform for ŠKODA Single Wicket.
+              </li>
+              <li>
+                Introduce young players to the unique single-wicket format of
+                cricket.
+              </li>
+              <li>
+                Provide aspiring cricketers with an opportunity to showcase
+                their individual skills.
+              </li>
+              <li>
+                Create an engaging platform for cricket enthusiasts and
+                participants.
+              </li>
+              <li>
+                Strengthen the connection between ŠKODA AUTO India and the
+                cricketing community.
+              </li>
             </ul>
           </div>
+
           <div class="theme-h-line"></div>
 
+          <!-- The Solution -->
           <div class="case-detail-block section-xs theme-padding-xs">
             <h3 class="case-detail-heading line-reveal">The Solution</h3>
+
             <p class="line-reveal">
-              The client was facing several operational challenges before
-              digitizing the platform. We developed a comprehensive event
-              management solution that addresses all key requirements.
+              We developed a dedicated digital experience for ŠKODA Single
+              Wicket, bringing the tournament, its purpose, and its cricketing
+              philosophy together in one platform.
+            </p>
+
+            <p class="line-reveal">
+              The platform introduces users to the concept of single-wicket
+              cricket while communicating ŠKODA's message, mission, and vision.
+              It creates a strong digital identity for the initiative and gives
+              young cricketers a space to discover, participate, and showcase
+              their individual talent.
             </p>
           </div>
+
           <div class="theme-h-line"></div>
+
+          <!-- Client Challenges -->
           <div class="case-detail-block section-xs theme-padding-xs">
             <h3 class="case-detail-heading line-reveal">Client Challenges</h3>
+
             <p class="line-reveal">
-              The client was facing several operational challenges before
-              digitizing the platform:
+              The challenge was to communicate a relatively unique format of
+              cricket in a simple and engaging way while positioning ŠKODA
+              Single Wicket as an opportunity for young and aspiring players.
             </p>
+
+            <ul class="list-point line-reveal">
+              <li>
+                Explaining the single-wicket cricket format to a wider audience.
+              </li>
+              <li>
+                Communicating the initiative's message, mission, and vision
+                clearly.
+              </li>
+              <li>
+                Making the platform engaging for young cricket enthusiasts.
+              </li>
+              <li>Highlighting the individual nature of the competition.</li>
+              <li>
+                Creating a strong digital presence for the ŠKODA Single Wicket
+                initiative.
+              </li>
+              <li>
+                Connecting the brand's values with passion, talent, and cricket.
+              </li>
+            </ul>
           </div>
+
           <div class="theme-h-line"></div>
+
+          <!-- Challenges -->
           <div class="case-detail-block section-xs theme-padding-xs">
             <h3 class="case-detail-heading line-reveal">Challenges</h3>
+
+            <p class="line-reveal">
+              Single-wicket cricket is different from the traditional team-based
+              format. The platform needed to communicate this difference while
+              keeping the experience simple, informative, and engaging.
+            </p>
+
             <ul class="list-point line-reveal">
-              <li>Difficulty managing a large product catalog.</li>
-              <li>Products were not organized properly into categories.</li>
+              <li>Making a lesser-known cricket format easy to understand.</li>
               <li>
-                Slow website performance affecting the shopping experience.
+                Presenting the tournament as an individual showcase of talent.
               </li>
-              <li>Non-responsive design on mobile devices.</li>
-              <li>Complex checkout process leading to cart abandonment.</li>
-              <li>Need for secure online payment integration.</li>
-              <li>Manual order and inventory management.</li>
-              <li>Limited product search and filtering options.</li>
-              <li>Poor user experience impacting customer engagement.</li>
               <li>
-                Requirement for a scalable platform to support future growth.
+                Balancing brand communication with an authentic cricket
+                experience.
+              </li>
+              <li>
+                Creating an experience that appeals to both young players and
+                cricket enthusiasts.
               </li>
             </ul>
           </div>
+
           <div class="theme-h-line"></div>
+
+          <!-- Results -->
           <div class="case-detail-block section-xs theme-padding-xs">
             <h3 class="case-detail-heading line-reveal">Results</h3>
+
             <ul class="list-point line-reveal">
-              <li>Faster website performance.</li>
-              <li>Improved shopping experience across all devices.</li>
-              <li>Easier product and inventory management.</li>
-              <li>Secure and seamless online payments.</li>
               <li>
-                Better customer engagement and higher conversion potential.
+                Created a dedicated digital identity for the ŠKODA Single Wicket
+                initiative.
               </li>
               <li>
-                A scalable platform capable of supporting business growth.
+                Made the concept of single-wicket cricket easier for users to
+                understand.
               </li>
-              <li>SEO-optimized website structure</li>
-              <li>Secure and scalable architecture</li>
+              <li>
+                Created a platform that communicates the brand's message,
+                mission, and vision through cricket.
+              </li>
+              <li>
+                Provided young and aspiring cricketers with a platform focused
+                on individual talent and performance.
+              </li>
+              <li>
+                Strengthened the connection between ŠKODA AUTO India, cricket,
+                young talent, and the wider community.
+              </li>
             </ul>
           </div>
+
           <div class="theme-h-line"></div>
+
+          <!-- Highlighted Features -->
           <div class="case-detail-block section-xs theme-padding-xs">
             <h3 class="case-detail-heading line-reveal">
               Highlighted Features
             </h3>
+
             <ul class="list-point line-reveal">
-              <li>Event Discovery & Listings</li>
-              <li>Online Registration</li>
-              <li>Secure Payment Gateway</li>
-              <li>Event Categories</li>
-              <li>Participant Management</li>
-              <li>User Login & Profile</li>
-              <li>Responsive Confirmation</li>
-              <li>Admin Management Panel</li>
-              <li>SEO-Friendly Website</li>
-              <li>Fast Performance</li>
-              <li>Analytics & Reporting</li>
-              <li>Third-Party Integration Tools</li>
-              <li>Scalable Architecture</li>
+              <li>
+                <strong>Single Wicket Cricket</strong> - Introduces users to a unique
+                form of cricket where individual players compete against each other.
+              </li>
+
+              <li>
+                <strong>Individual Talent Showcase</strong> - The format gives players
+                an opportunity to demonstrate their individual batting and bowling
+                abilities.
+              </li>
+
+              <li>
+                <strong>Our Message</strong> - Communicates ŠKODA's vision of discovering
+                and supporting the next generation of cricketing talent.
+              </li>
+
+              <li>
+                <strong>Our Mission</strong> - Focuses on providing exciting opportunities
+                for young and budding cricketers while creating an environment for
+                participation, learning, and success.
+              </li>
+
+              <li>
+                <strong>Our Vision</strong> - Aims to establish Single Wicket Cricket
+                as a widely recognised and celebrated format of cricket across communities.
+              </li>
+
+              <li>
+                <strong>Cricket Community</strong> - Creates a platform that brings
+                young players, cricket enthusiasts, and the wider community together.
+              </li>
+
+              <li>
+                <strong>Talent Discovery</strong> - Provides an opportunity for emerging
+                players to get noticed and take their cricketing journey to the next
+                level.
+              </li>
             </ul>
           </div>
         </div>
       </div>
     </div>
   </section>
-
   <section class="section-footer section-xs pt-0">
     <div class="theme-h-line theme-outerline-left"></div>
     <div class="container custom-container-1840">
@@ -367,7 +376,10 @@ const imagesurl = "/media/images/";
             </ul>
           </div>
           <div class="copyright-text pl-4">
-            <p>Copyright &copy; <b>Midnight</b> {new Date().getFullYear()}</p>
+            <p>
+              Copyright &copy; <b>Midnight</b>
+              {new Date().getFullYear()}
+            </p>
           </div>
         </div>
       </div>
