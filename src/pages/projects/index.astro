@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
 import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
 import FootScripts from "../../components/FootScripts.astro";
 
 const imagesurl = "/media/images/";
@@ -40,45 +41,262 @@ const imagesurl = "/media/images/";
         <div class="theme-h-line theme-outerline-left theme-outerline-right">
         </div>
         <div class="case-study-block gray-bg">
-          {
-            [
-              { img: "product/new-product/skoda/5.webp", title: "SKODA SINGLE WICKET", link: "/projects/skoda" },
-              { img: "product/new-product/13.webp", title: "Uzeir Holding", link: "/projects/uzeir" },
-              { img: "product/new-product/15.webp", title: "SSX INDIA", link: "/projects/ssx" },
-              { img: "product/new-product/10.webp", title: "Allwyn Chem Industries", link: "/projects/allwyn" },
-              { img: "product/new-product/9.webp", title: "Antarang Crafts", link: "/projects/antarang" },
-              { img: "product/new-product/7.webp", title: "Education ERP", link: "/projects/education-erp" },
-              { img: "product/new-product/8.webp", title: "Document Management System", link: "/projects/doc-manage-system" },
-              { img: "product/new-product/11.webp", title: "Alaap Mobile App", link: "/projects/alap" },
-              { img: "product/new-product/sankalp/12.webp", title: "Sankalp Mobile App", link: "/projects/sankalp" },
-              { img: "product/new-product/6.webp", title: "Jay Ambaji Mobile App", link: "/projects/ambaji" },
-              { img: "product/new-product/14.webp", title: "Indian Future Typecon", link: "/projects/indian-future-typecon" },
-            ].reduce((rows, item, i, arr) => {
-              if (i % 2 === 0) rows.push(arr.slice(i, i + 2));
-              return rows;
-            }, []).map((pair) => (
-              <>
-                <div class="theme-h-line theme-outerline-left theme-outerline-right"></div>
-                <div class="grid-col-2">
-                  {pair.map((item, idx) => (
-                    <div class={`section-xs theme-padding-xs ${idx === 1 ? 'border-right' : ''}`}>
-                      <div class="block-link">
-                        <a href={item.link} class="block-link-overlay" aria-label={`View ${item.title}`}></a>
-                        <div class="case-study-title mb-4">
-                          <h6 class="line-reveal fw-500">{item.title}</h6>
-                        </div>
-                        <div class="case-study-img">
-                          <picture>
-                            <img src={`${imagesurl}${item.img}`} alt={item.title} width="915" height="815" />
-                          </picture>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
+          <div class="theme-h-line theme-outerline-left theme-outerline-right">
+          </div>
+          <div class="grid-col-2">
+            <div class="section-xs theme-padding-xs">
+              <div class="block-link">
+                <a
+                  href="/projects/skoda"
+                  class="block-link-overlay"
+                  aria-label="View SKODA SINGLE WICKET"></a>
+                <div class="case-study-title mb-4">
+                  <h6 class="line-reveal fw-500">SKODA SINGLE WICKET</h6>
                 </div>
-              </>
-            ))
-          }
+                <div class="case-study-img">
+                  <picture
+                    ><img
+                      src={`${imagesurl}product/new-product/skoda/5.webp`}
+                      alt="SKODA SINGLE WICKET"
+                      width="915"
+                      height="815"
+                    /></picture>
+                </div>
+                <a href="javascript:void(0)" class="visit-btn">Visit the Website <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 12l14 0"></path><path d="M13 18l6 -6"></path><path d="M13 6l6 6"></path></svg></a>
+              </div>
+            </div>
+            <div class="section-xs theme-padding-xs border-right">
+              <div class="block-link">
+                <a
+                  href="/projects/uzeir"
+                  class="block-link-overlay"
+                  aria-label="View Uzeir Holding"></a>
+                <div class="case-study-title mb-4">
+                  <h6 class="line-reveal fw-500">Uzeir Holding</h6>
+                </div>
+                <div class="case-study-img">
+                  <picture
+                    ><img
+                      src={`${imagesurl}product/new-product/13.webp`}
+                      alt="Uzeir Holding"
+                      width="915"
+                      height="815"
+                    /></picture>
+                </div>
+                <a href="https://uzeirholding.com/" target="_blank" class="visit-btn">Visit the Website <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 12l14 0"></path><path d="M13 18l6 -6"></path><path d="M13 6l6 6"></path></svg></a>
+              </div>
+            </div>
+          </div>
+          <div class="theme-h-line theme-outerline-left theme-outerline-right">
+          </div>
+          <div class="grid-col-2">
+            <div class="section-xs theme-padding-xs">
+              <div class="block-link">
+                <a
+                  href="/projects/ssx"
+                  class="block-link-overlay"
+                  aria-label="View SSX INDIA"></a>
+                <div class="case-study-title mb-4">
+                  <h6 class="line-reveal fw-500">SSX INDIA</h6>
+                </div>
+                <div class="case-study-img">
+                  <picture
+                    ><img
+                      src={`${imagesurl}product/new-product/15.webp`}
+                      alt="SSX INDIA"
+                      width="915"
+                      height="815"
+                    /></picture>
+                </div>
+                <a href="https://ssxindia.com/" target="_blank" class="visit-btn">Visit the Website <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 12l14 0"></path><path d="M13 18l6 -6"></path><path d="M13 6l6 6"></path></svg></a>
+              </div>
+            </div>
+            <div class="section-xs theme-padding-xs border-right">
+              <div class="block-link">
+                <a
+                  href="/projects/allwyn"
+                  class="block-link-overlay"
+                  aria-label="View Allwyn Chem Industries"></a>
+                <div class="case-study-title mb-4">
+                  <h6 class="line-reveal fw-500">Allwyn Chem Industries</h6>
+                </div>
+                <div class="case-study-img">
+                  <picture
+                    ><img
+                      src={`${imagesurl}product/new-product/10.webp`}
+                      alt="Allwyn Chem Industries"
+                      width="915"
+                      height="815"
+                    /></picture>
+                </div>
+                <a href="javascript:void(0)" class="visit-btn">Visit the Website <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 12l14 0"></path><path d="M13 18l6 -6"></path><path d="M13 6l6 6"></path></svg></a>
+              </div>
+            </div>
+          </div>
+          <div class="theme-h-line theme-outerline-left theme-outerline-right">
+          </div>
+          <div class="grid-col-2">
+            <div class="section-xs theme-padding-xs">
+              <div class="block-link">
+                <a
+                  href="/projects/antarang"
+                  class="block-link-overlay"
+                  aria-label="View Antarang Crafts"></a>
+                <div class="case-study-title mb-4">
+                  <h6 class="line-reveal fw-500">Antarang Crafts</h6>
+                </div>
+                <div class="case-study-img">
+                  <picture
+                    ><img
+                      src={`${imagesurl}product/new-product/9.webp`}
+                      alt="Antarang Crafts"
+                      width="915"
+                      height="815"
+                    /></picture>
+                </div>
+                <a href="https://antarangcrafts.com/" target="_blank" class="visit-btn">Visit the Website <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 12l14 0"></path><path d="M13 18l6 -6"></path><path d="M13 6l6 6"></path></svg></a>
+              </div>
+            </div>
+            <div class="section-xs theme-padding-xs border-right">
+              <div class="block-link">
+                <a
+                  href="/projects/education-erp"
+                  class="block-link-overlay"
+                  aria-label="View Education ERP"></a>
+                <div class="case-study-title mb-4">
+                  <h6 class="line-reveal fw-500">Education ERP</h6>
+                </div>
+                <div class="case-study-img">
+                  <picture
+                    ><img
+                      src={`${imagesurl}product/new-product/7.webp`}
+                      alt="Education ERP"
+                      width="915"
+                      height="815"
+                    /></picture>
+                </div>
+                <a href="javascript:void(0)" class="visit-btn">Visit the Website <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 12l14 0"></path><path d="M13 18l6 -6"></path><path d="M13 6l6 6"></path></svg></a>
+              </div>
+            </div>
+          </div>
+          <div class="theme-h-line theme-outerline-left theme-outerline-right">
+          </div>
+          <div class="grid-col-2">
+            <div class="section-xs theme-padding-xs">
+              <div class="block-link">
+                <a
+                  href="/projects/doc-manage-system"
+                  class="block-link-overlay"
+                  aria-label="View Document Management System"></a>
+                <div class="case-study-title mb-4">
+                  <h6 class="line-reveal fw-500">Document Management System</h6>
+                </div>
+                <div class="case-study-img">
+                  <picture
+                    ><img
+                      src={`${imagesurl}product/new-product/8.webp`}
+                      alt="Document Management System"
+                      width="915"
+                      height="815"
+                    /></picture>
+                </div>
+                <a href="javascript:void(0)" class="visit-btn">Visit the Website <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 12l14 0"></path><path d="M13 18l6 -6"></path><path d="M13 6l6 6"></path></svg></a>
+              </div>
+            </div>
+            <div class="section-xs theme-padding-xs border-right">
+              <div class="block-link">
+                <a
+                  href="/projects/alap"
+                  class="block-link-overlay"
+                  aria-label="View Alaap Mobile App"></a>
+                <div class="case-study-title mb-4">
+                  <h6 class="line-reveal fw-500">Alaap Mobile App</h6>
+                </div>
+                <div class="case-study-img">
+                  <picture
+                    ><img
+                      src={`${imagesurl}product/new-product/11.webp`}
+                      alt="Alaap Mobile App"
+                      width="915"
+                      height="815"
+                    /></picture>
+                </div>
+                <a href="https://play.google.com/store/apps/details?id=com.midnight.alaap" target="_blank" class="visit-btn">Visit the Website <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 12l14 0"></path><path d="M13 18l6 -6"></path><path d="M13 6l6 6"></path></svg></a>
+              </div>
+            </div>
+          </div>
+          <div class="theme-h-line theme-outerline-left theme-outerline-right">
+          </div>
+          <div class="grid-col-2">
+            <div class="section-xs theme-padding-xs">
+              <div class="block-link">
+                <a
+                  href="/projects/sankalp"
+                  class="block-link-overlay"
+                  aria-label="View Sankalp Mobile App"></a>
+                <div class="case-study-title mb-4">
+                  <h6 class="line-reveal fw-500">Sankalp Mobile App</h6>
+                </div>
+                <div class="case-study-img">
+                  <picture
+                    ><img
+                      src={`${imagesurl}product/new-product/sankalp/12.webp`}
+                      alt="Sankalp Mobile App"
+                      width="915"
+                      height="815"
+                    /></picture>
+                </div>
+                <a href="javascript:void(0)" class="visit-btn">Visit the Website <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 12l14 0"></path><path d="M13 18l6 -6"></path><path d="M13 6l6 6"></path></svg></a>
+              </div>
+            </div>
+            <div class="section-xs theme-padding-xs border-right">
+              <div class="block-link">
+                <a
+                  href="/projects/ambaji"
+                  class="block-link-overlay"
+                  aria-label="View Jay Ambaji Mobile App"></a>
+                <div class="case-study-title mb-4">
+                  <h6 class="line-reveal fw-500">Jay Ambaji Mobile App</h6>
+                </div>
+                <div class="case-study-img">
+                  <picture
+                    ><img
+                      src={`${imagesurl}product/new-product/6.webp`}
+                      alt="Jay Ambaji Mobile App"
+                      width="915"
+                      height="815"
+                    /></picture>
+                </div>
+                <a href="https://play.google.com/store/apps/details?id=f.u.silvertouch" target="_blank" class="visit-btn">Visit the Website <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 12l14 0"></path><path d="M13 18l6 -6"></path><path d="M13 6l6 6"></path></svg></a>
+              </div>
+            </div>
+          </div>
+          <div class="theme-h-line theme-outerline-left theme-outerline-right">
+          </div>
+          <div class="grid-col-2">
+            <div class="section-xs theme-padding-xs">
+              <div class="block-link">
+                <a
+                  href="/projects/indian-future-typecon"
+                  class="block-link-overlay"
+                  aria-label="View Indian Future Typecon"></a>
+                <div class="case-study-title mb-4">
+                  <h6 class="line-reveal fw-500">Indian Future Typecon</h6>
+                </div>
+                <div class="case-study-img">
+                  <picture
+                    ><img
+                      src={`${imagesurl}product/new-product/14.webp`}
+                      alt="Indian Future Typecon"
+                      width="915"
+                      height="815"
+                    /></picture>
+                </div>
+                <a href="https://www.indiafuturetycoons.com/" target="_blank" class="visit-btn">Visit the Website <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 12l14 0"></path><path d="M13 18l6 -6"></path><path d="M13 6l6 6"></path></svg></a>
+              </div>
+            </div>
+            <div class="section-xs theme-padding-xs border-right"></div>
+          </div>
         </div>
 
         <!-- <div class="grid-col-2">
@@ -199,69 +417,12 @@ const imagesurl = "/media/images/";
   </section>
 </MainLayout>
 
-<section class="section-footer section-xs">
-  <div class="theme-h-line theme-outerline-left"></div>
-  <div class="container custom-container-1840">
-    <div class="contact-us-title section-xs pb-0">
-      <div class="section-title mb-0">
-        <h3 class="fw-500 is-uppercase font-orbitron pl-4">Let's Talk</h3>
-        <div class="theme-h-line"></div>
-      </div>
-      <div class="section-title pl-4">
-        <a href="/contact"><h2 class="text-roll">Contact Us</h2></a>
-      </div>
-    </div>
-    <div class="theme-h-line theme-outerline-left theme-outerline-right"></div>
-    <div class="footer-box">
-      <div class="media-wrapper">
-        <div class="footer-logo pl-4">
-          <picture>
-            <img
-              src={`${imagesurl}logo.svg`}
-              alt="Midnight Digital Logo"
-              width="145"
-              height="70"
-            />
-          </picture>
-        </div>
-        <div class="social-links">
-          <ul>
-            {
-              ["Facebook", "Instagram", "LinkedIn", "Twitter"].map((social) => (
-                <li>
-                  <a href="#">
-                    {social}
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                    >
-                      <>
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M9.707 5.293l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 1 1 -1.414 -1.414l5.293 -5.293l-5.293 -5.293a1 1 0 0 1 1.414 -1.414" />
-                      </>
-                    </svg>
-                  </a>
-                </li>
-              ))
-            }
-          </ul>
-        </div>
-        <div class="copyright-text pl-4">
-          <p>Copyright &copy; <b>Midnight</b> {new Date().getFullYear()}</p>
-        </div>
-      </div>
-    </div>
-    <div class="theme-h-line theme-outerline-left theme-outerline-right"></div>
-  </div>
-</section>
+  <Footer />
 
 <FootScripts page="home" pagetype="onepage" />
 
 <script is:inline>
-  // Simple image reveal animation on scroll
+  // Varied image reveal animations on scroll
   document.addEventListener("DOMContentLoaded", function () {
     if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined")
       return;
@@ -269,13 +430,29 @@ const imagesurl = "/media/images/";
     var images = document.querySelectorAll(".case-study-img img");
     if (!images.length) return;
 
-    images.forEach(function (img) {
+    // Different reveal directions
+    var reveals = [
+      // Left to right
+      { from: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)", to: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" },
+      // Right to left
+      { from: "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)", to: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" },
+      // Top to bottom
+      { from: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)", to: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" },
+      // Bottom to top
+      { from: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)", to: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" },
+      // Center expand
+      { from: "polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)", to: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" },
+    ];
+
+    images.forEach(function (img, index) {
+      var reveal = reveals[index % reveals.length];
+
       gsap.set(img, {
-        clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
+        clipPath: reveal.from,
       });
 
       gsap.to(img, {
-        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+        clipPath: reveal.to,
         duration: 1.2,
         ease: "power3.inOut",
         scrollTrigger: {

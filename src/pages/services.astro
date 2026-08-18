@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 import FootScripts from "../components/FootScripts.astro";
 
 const imagesurl = "/media/images/";
@@ -617,68 +618,7 @@ const imagesurl = "/media/images/";
     </div>
   </div>
 
-  <section class="section-footer section-xs pt-0">
-    <div class="theme-h-line theme-outerline-left"></div>
-    <div class="container custom-container-1840">
-      <div class="contact-us-title section-xs pb-0">
-        <div class="section-title mb-0">
-          <h3 class="fw-500 is-uppercase font-orbitron pl-4">Let's Talk</h3>
-          <div class="theme-h-line"></div>
-        </div>
-        <div class="section-title pl-4">
-          <a href="/contact"><h2 class="text-roll">Contact Us</h2></a>
-        </div>
-      </div>
-      <div class="theme-h-line theme-outerline-left theme-outerline-right">
-      </div>
-      <div class="footer-box">
-        <div class="media-wrapper">
-          <div class="footer-logo pl-4">
-            <picture>
-              <img
-                src={`${imagesurl}logo.svg`}
-                alt="Midnight Digital Logo"
-                width="145"
-                height="70"
-              />
-            </picture>
-          </div>
-          <div class="social-links">
-            <ul>
-              {
-                ["Facebook", "Instagram", "LinkedIn", "Twitter"].map(
-                  (social) => (
-                    <li>
-                      <a href="#">
-                        {social}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="currentColor"
-                        >
-                          <>
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M9.707 5.293l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 1 1 -1.414 -1.414l5.293 -5.293l-5.293 -5.293a1 1 0 0 1 1.414 -1.414" />
-                          </>
-                        </svg>
-                      </a>
-                    </li>
-                  ),
-                )
-              }
-            </ul>
-          </div>
-          <div class="copyright-text pl-4">
-            <p>Copyright &copy; <b>Midnight</b> {new Date().getFullYear()}</p>
-          </div>
-        </div>
-      </div>
-      <div class="theme-h-line theme-outerline-left theme-outerline-right">
-      </div>
-    </div>
-  </section>
+  <Footer />
 
   <FootScripts page="home" pagetype="onepage" />
 

@@ -1,0 +1,78 @@
+<!-- Enquiry Popup -->
+<div class="enquiry-popup-overlay" id="enquiryPopup">
+  <div class="enquiry-popup">
+    <button class="enquiry-popup-close" id="enquiryClose" aria-label="Close">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M18 6l-12 12"></path><path d="M6 6l12 12"></path></svg>
+    </button>
+    <div class="enquiry-popup-header">
+      <h3 class="font-orbitron fw-600">Get In Touch</h3>
+      <p>We'd love to hear from you. Fill in the details below.</p>
+    </div>
+    <form class="enquiry-popup-form" id="enquiryForm">
+      <div class="enquiry-form-row">
+        <div class="enquiry-form-group">
+          <label>First Name*</label>
+          <input type="text" name="firstName" placeholder="Enter first name" required />
+        </div>
+        <div class="enquiry-form-group">
+          <label>Last Name*</label>
+          <input type="text" name="lastName" placeholder="Enter last name" required />
+        </div>
+      </div>
+      <div class="enquiry-form-row">
+        <div class="enquiry-form-group">
+          <label>Email*</label>
+          <input type="email" name="email" placeholder="Enter email" required />
+        </div>
+        <div class="enquiry-form-group">
+          <label>Phone</label>
+          <input type="tel" name="phone" placeholder="Enter phone number" />
+        </div>
+      </div>
+      <div class="enquiry-form-group">
+        <label>Subject*</label>
+        <input type="text" name="subject" placeholder="What's this about?" required />
+      </div>
+      <div class="enquiry-form-group">
+        <label>Message*</label>
+        <textarea name="message" placeholder="Write your message..." rows="4" required></textarea>
+      </div>
+      <button type="submit" class="enquiry-submit-btn">
+        Submit Now
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 12l14 0"></path><path d="M13 18l6 -6"></path><path d="M13 6l6 6"></path></svg>
+      </button>
+    </form>
+  </div>
+</div>
+
+<script is:inline>
+  // Show popup on page load and every 6 seconds after close
+  document.addEventListener('DOMContentLoaded', function() {
+    var popup = document.getElementById('enquiryPopup');
+    var closeBtn = document.getElementById('enquiryClose');
+    if (!popup || !closeBtn) return;
+
+    function showPopup() {
+      popup.classList.add('is-active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function hidePopup() {
+      popup.classList.remove('is-active');
+      document.body.style.overflow = '';
+      // Show again after 6 seconds
+      setTimeout(showPopup, 6000);
+    }
+
+    // Show immediately on page load
+    showPopup();
+
+    closeBtn.addEventListener('click', hidePopup);
+
+    popup.addEventListener('click', function(e) {
+      if (e.target === popup) {
+        hidePopup();
+      }
+    });
+  });
+</script>
