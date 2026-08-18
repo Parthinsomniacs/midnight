@@ -40,277 +40,45 @@ const imagesurl = "/media/images/";
         <div class="theme-h-line theme-outerline-left theme-outerline-right">
         </div>
         <div class="case-study-block gray-bg">
-          <div class="case-study-block gray-bg">
-            <div
-              class="theme-h-line theme-outerline-left theme-outerline-right"
-            >
-            </div>
-            <div class="grid-col-2">
-              <div class="section-xs theme-padding-xs">
-                <div class="block-link">
-                  <a
-                    href="/projects/skoda"
-                    class="block-link-overlay"
-                    aria-label="View runr kids case study"></a>
-                  <div class="case-study-title mb-4">
-                    <h6 class="line-reveal fw-500">SKODA SINGLE WICKET</h6>
-                  </div>
-                  <div class="case-study-img">
-                    <picture>
-                      <img
-                        src={`${imagesurl}product/new-product/skoda/5.webp`}
-                        alt="Case Study"
-                        width="915"
-                        height="815"
-                      />
-                    </picture>
-                  </div>
+          {
+            [
+              { img: "product/new-product/skoda/5.webp", title: "SKODA SINGLE WICKET", link: "/projects/skoda" },
+              { img: "product/new-product/13.webp", title: "Uzeir Holding", link: "/projects/uzeir" },
+              { img: "product/new-product/15.webp", title: "SSX INDIA", link: "/projects/ssx" },
+              { img: "product/new-product/10.webp", title: "Allwyn Chem Industries", link: "/projects/allwyn" },
+              { img: "product/new-product/9.webp", title: "Antarang Crafts", link: "/projects/antarang" },
+              { img: "product/new-product/7.webp", title: "Education ERP", link: "/projects/education-erp" },
+              { img: "product/new-product/8.webp", title: "Document Management System", link: "/projects/doc-manage-system" },
+              { img: "product/new-product/11.webp", title: "Alaap Mobile App", link: "/projects/alap" },
+              { img: "product/new-product/sankalp/12.webp", title: "Sankalp Mobile App", link: "/projects/sankalp" },
+              { img: "product/new-product/6.webp", title: "Jay Ambaji Mobile App", link: "/projects/ambaji" },
+              { img: "product/new-product/14.webp", title: "Indian Future Typecon", link: "/projects/indian-future-typecon" },
+            ].reduce((rows, item, i, arr) => {
+              if (i % 2 === 0) rows.push(arr.slice(i, i + 2));
+              return rows;
+            }, []).map((pair) => (
+              <>
+                <div class="theme-h-line theme-outerline-left theme-outerline-right"></div>
+                <div class="grid-col-2">
+                  {pair.map((item, idx) => (
+                    <div class={`section-xs theme-padding-xs ${idx === 1 ? 'border-right' : ''}`}>
+                      <div class="block-link">
+                        <a href={item.link} class="block-link-overlay" aria-label={`View ${item.title}`}></a>
+                        <div class="case-study-title mb-4">
+                          <h6 class="line-reveal fw-500">{item.title}</h6>
+                        </div>
+                        <div class="case-study-img">
+                          <picture>
+                            <img src={`${imagesurl}${item.img}`} alt={item.title} width="915" height="815" />
+                          </picture>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              </div>
-              <div class="border-right section-xs theme-padding-xs">
-                <div class="block-link">
-                  <a
-                    href="/projects/uzeir"
-                    class="block-link-overlay"
-                    aria-label="View Uzeir case study"></a>
-                  <div class="case-study-title mb-4">
-                    <h6 class="line-reveal fw-500">Uzeir Holding</h6>
-                  </div>
-                  <div class="case-study-img">
-                    <picture>
-                      <img
-                        src={`${imagesurl}product/new-product/13.webp`}
-                        alt="Case Study"
-                        width="915"
-                        height="815"
-                      />
-                    </picture>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="theme-h-line theme-outerline-left theme-outerline-right"
-            >
-            </div>
-            <div class="grid-col-2">
-              <div class="section-xs theme-padding-xs">
-                <div class="block-link">
-                  <a
-                    href="/projects/antarang"
-                    class="block-link-overlay"
-                    aria-label="View Antrang case study"></a>
-                  <div class="case-study-title mb-4">
-                    <h6 class="line-reveal fw-500">Antarang Crafts</h6>
-                  </div>
-                  <div class="case-study-img">
-                    <picture>
-                      <img
-                        src={`${imagesurl}product/new-product/9.webp`}
-                        alt="Case Study"
-                        width="915"
-                        height="815"
-                      />
-                    </picture>
-                  </div>
-                </div>
-              </div>
-              <div class="border-right section-xs theme-padding-xs">
-                <div class="block-link">
-                  <a
-                    href="/projects/allwyn"
-                    class="block-link-overlay"
-                    aria-label="View Allwyn case study"></a>
-                  <div class="case-study-title mb-4 line-reveal">
-                    <h6 class="line-reveal fw-600">Allwyn Chem Industries</h6>
-                  </div>
-                  <div class="case-study-img">
-                    <picture>
-                      <img
-                        src={`${imagesurl}product/new-product/10.webp`}
-                        alt="Case Study"
-                        width="915"
-                        height="815"
-                      />
-                    </picture>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="theme-h-line theme-outerline-left theme-outerline-right"
-            >
-            </div>
-            <div class="grid-col-2">
-              <div class="section-xs theme-padding-xs">
-                <div class="block-link">
-                  <a
-                    href="/projects/education-erp"
-                    class="block-link-overlay"
-                    aria-label="View education erp case study"></a>
-                  <div class="case-study-title mb-4">
-                    <h6 class="line-reveal fw-500">Education ERP</h6>
-                  </div>
-                  <div class="case-study-img">
-                    <picture>
-                      <img
-                        src={`${imagesurl}product/new-product/7.webp`}
-                        alt="Case Study"
-                        width="915"
-                        height="815"
-                      />
-                    </picture>
-                  </div>
-                </div>
-              </div>
-              <div class="border-right section-xs theme-padding-xs">
-                <div class="block-link">
-                  <a
-                    href="/projects/doc-manage-system"
-                    class="block-link-overlay"
-                    aria-label="View runr Reviews"></a>
-                  <div class="case-study-title mb-4 line-reveal">
-                    <h6 class="line-reveal fw-600">
-                      Document Management System
-                    </h6>
-                  </div>
-                  <div class="case-study-img">
-                    <picture>
-                      <img
-                        src={`${imagesurl}product/new-product/8.webp`}
-                        alt="Case Study"
-                        width="915"
-                        height="815"
-                      />
-                    </picture>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="theme-h-line theme-outerline-left theme-outerline-right"
-            >
-            </div>
-            <div class="grid-col-2">
-              <div class="section-xs theme-padding-xs">
-                <div class="block-link">
-                  <a
-                    href="/projects/alap"
-                    class="block-link-overlay"
-                    aria-label="View runr kids case study"></a>
-                  <div class="case-study-title mb-4">
-                    <h6 class="line-reveal fw-500">Alaap Mobile APP</h6>
-                  </div>
-                  <div class="case-study-img">
-                    <picture>
-                      <img
-                        src={`${imagesurl}product/new-product/11.webp`}
-                        alt="Case Study"
-                        width="915"
-                        height="815"
-                      />
-                    </picture>
-                  </div>
-                </div>
-              </div>
-              <div class="border-right section-xs theme-padding-xs">
-                <div class="block-link">
-                  <a
-                    href="/projects/sankalp"
-                    class="block-link-overlay"
-                    aria-label="View runr Reviews"></a>
-                  <div class="case-study-title mb-4 line-reveal">
-                    <h6 class="line-reveal fw-600">Sankalp Mobile App</h6>
-                  </div>
-                  <div class="case-study-img">
-                    <picture>
-                      <img
-                        src={`${imagesurl}product/new-product/sankalp/12.webp`}
-                        alt="Case Study"
-                        width="915"
-                        height="815"
-                      />
-                    </picture>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="theme-h-line theme-outerline-left theme-outerline-right"
-            >
-            </div>
-            <div class="grid-col-2">
-              <div class="section-xs theme-padding-xs">
-                <div class="block-link">
-                  <a
-                    href="/projects/ambaji"
-                    class="block-link-overlay"
-                    aria-label="View Jay Ambaji App case study"></a>
-                  <div class="case-study-title mb-4 line-reveal">
-                    <h6 class="line-reveal fw-600">Jay Ambaji Mobile App</h6>
-                  </div>
-                  <div class="case-study-img">
-                    <picture>
-                      <img
-                        src={`${imagesurl}product/new-product/6.webp`}
-                        alt="Case Study"
-                        width="915"
-                        height="815"
-                      />
-                    </picture>
-                  </div>
-                </div>
-              </div>
-              <div class="section-xs theme-padding-xs">
-                <div class="block-link">
-                  <a
-                    href="/projects/indian-future-typecon"
-                    class="block-link-overlay"
-                    aria-label="View Indian Future Typecon case study"></a>
-                  <div class="case-study-title mb-4">
-                    <h6 class="line-reveal fw-500">Indian Future Typecon</h6>
-                  </div>
-                  <div class="case-study-img">
-                    <picture>
-                      <img
-                        src={`${imagesurl}product/new-product/14.webp`}
-                        alt="Case Study"
-                        width="915"
-                        height="815"
-                      />
-                    </picture>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="theme-h-line theme-outerline-left theme-outerline-right"
-            >
-            </div>
-            <div class="grid-col-2">
-              <div class="section-xs theme-padding-xs">
-                <div class="block-link">
-                  <a
-                    href="/projects/ssx"
-                    class="block-link-overlay"
-                    aria-label="View SSX case study"></a>
-                  <div class="case-study-title mb-4">
-                    <h6 class="line-reveal fw-500">SSX INDIA</h6>
-                  </div>
-                  <div class="case-study-img">
-                    <picture>
-                      <img
-                        src={`${imagesurl}product/new-product/15.webp`}
-                        alt="Case Study"
-                        width="915"
-                        height="815"
-                      />
-                    </picture>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+              </>
+            ))
+          }
         </div>
 
         <!-- <div class="grid-col-2">
